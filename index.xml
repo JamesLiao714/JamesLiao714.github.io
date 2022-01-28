@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>James Blog</title>
+    <link>https://jamesliao714.github.io/</link>
+    <description>Recent content on James Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Jan 2022 08:06:25 +0600</lastBuildDate><atom:link href="https://jamesliao714.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resultados de Búsqueda</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>Este archivo existe únicamente para responder a la URL /search con la plantilla de diseño search relacionada.
+No se muestra ningún contenido aquí, todo el contenido se basa en la plantilla layouts/page/search.html
+Establecer una prioridad muy baja en el mapa del sitio le dirá a los motores de búsqueda que éste no es un contenido importante.
+Esta implementación utiliza Fusejs, jquery y mark.js
+Configuración inicial La búsqueda depende del tipo de contenido de salida adicional de JSON en config.</description>
+    </item>
+    
+    <item>
+      <title>Resultados de Búsqueda</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>Este archivo existe únicamente para responder a la URL /search con la plantilla de diseño search relacionada.
+No se muestra ningún contenido aquí, todo el contenido se basa en la plantilla layouts/page/search.html
+Establecer una prioridad muy baja en el mapa del sitio le dirá a los motores de búsqueda que éste no es un contenido importante.
+Esta implementación utiliza Fusejs, jquery y mark.js
+Configuración inicial La búsqueda depende del tipo de contenido de salida adicional de JSON en config.</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>অনুসন্ধানের ফলাফল</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>অনুসন্ধানের ফলাফল</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>元宇宙、NFT 市場看法</title>
+      <link>https://jamesliao714.github.io/nft-meata/</link>
+      <pubDate>Fri, 28 Jan 2022 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/nft-meata/</guid>
+      <description>網路泡沫化  近期隨著全球股市攀高，不少人擔心網際網路泡沫事件恐將重演。1995-2001 年間發生的dot-com泡沫，由當時一系列和資訊科技、網際網路的投機事件所引起。而在泡沫破裂後，對世界金融造成毀滅性的後果，超過8兆美元的市值從股市蒸發。
+開端
+多數的泡沫都和新科技或新的商業機會有關。網路帶來了無限的前景，但也同時摧毀了巨大的財富。金融泡沫的模樣總是相似，當一群股票開始上漲，泡沫逐漸形成，只是這次是跟網路有關的股票。股價衝高後又鼓勵下一批人進場，加上名師推薦、媒體報導，又有更多人來買。
+最初進場的人賺得盆滿缽滿，這些成功的投資人又會對外散播「很好賺」的消息，使得這些股票又漲得更高，整個過程就像是老鼠會。但隨著時間過去，會需要愈來愈多的投資人從更早的投資人手中接過股票，直到再也沒有更更笨的傻瓜（greater fool）。
+聯準會
+聯準會（FED）在戳破 2000 年科技泡沫中參了一腳，當時 Fed 將利率拉升至循環新高點、股市也同時觸頂。一旦市場意識到，Fed 有意將短期利率拉升至循環高點、讓熱絡的美國經濟降溫，科技股隨即反轉向下。
+2000 年當時聯邦基金利率接近5.85%，意味著投資人從債券就能獲得不錯報酬、能夠替代高漲的科技類股。如今的聯邦基金利率則接近0%，對投資人而言，並沒有類似2000年的替代品。
+Fed主席鮑爾（Jerome Powell）2020 曾指出，「股市本益比確實已來到歷史偏高的位置，但在無風險利率將持續(sustained period)保持低檔的世界裡，股票風險溢酬就是如今看到的樣子。」
+之前曾預見金融海嘯和達康泡沫、備受尊崇的價值投資大師霍華馬克斯(Howard Marks)警告，Fed 祭出量化寬鬆貨幣政策抗疫，投資人恐因此面臨史上最低的期望報酬(lowest prospective returns in history)，市場也相當容易受到「出乎意料的負面事件」(negative surprises)衝擊。
+馬克斯 10 月 13 日在備忘錄指出，聯邦基金利率降得愈低，債券殖利率也會跟著下滑，意味著利息較高的在外流通債券，價值將會上升。債券殖利率下滑，相對於股票的競爭力也降低，代表股票不必變得便宜來吸引投資人買進。換句話說，股價也會水漲船高。
+結論
+總結來看，戳破泡沫的主要關鍵仍是資金枯竭。在泡沫的前幾年，利率創下史上最低，人們剛開始使用網路，對科技公司的興趣極高，使得資金自由的竄入這些公司。但是隨著估值上升，終有一天資金會枯竭。尤其很多網路公司，根本沒有商業計劃或產品，如同現在的資金盤或老鼠會。隨著投資的資金活水流乾，大量的網路公司在 2001 年破產倒閉，高達數兆美元的投資資本也跟著蒸發。
+產也革命循環，生產力爆發期  隨著個人電腦的成熟及應用，拍賣網站如 ebay 形成了新的產業革命。經鍋1995 - 2000 年網路泡沫化的廝殺，僅存的幾家公司如 google, amazon, microsoft 等抓準時機大收割，將網路逐漸融入我們的生活。許多後續大科技公司如 facebook, apple 等也隨之崛起。 2010 比特幣問世後，開啟了區塊鏈、加密貨幣的新革名，2020 的疫情，也讓 NFT, 元宇宙的概念成為風潮。
+我的看法  我覺得未來的 NFT 市場會像 2000 年網路泡沫化一樣僅有幾個項目存活，有碰 NFT 的玩家應該不難發現現在市場上還是以投機居多，仗著元宇宙的名號招搖撞騙。從上述的歷史及經驗中，我們可以看到現在與當時有許多相似之處。隨著聯準會宣近幾年將分段執行升息，市場的熱錢想必會回流不少。我自己也有玩加密貨幣，最進幣圈市場大跌讓我深刻體會到，前幾年的幣圈的榮景會給散戶一種錯誤的預期，盲目的幻想高點，想讓資產翻千倍。
+虛擬世界、貨幣、NFT 的確是未來的趨勢，我也是長期看漲，但目前的技術是否達到對應的價錢？未來風潮退了是否還有人要用一倍甚至一半的價錢購買都值得我們思考。小心停損、正確理財、等待時機進場，才不會重蹈之前網路泡沫化的覆轍，讓自己成為套在高點的韭菜。</description>
+    </item>
+    
+    <item>
+      <title>台積電三奈米挑戰</title>
+      <link>https://jamesliao714.github.io/tsmc-3nm/</link>
+      <pubDate>Mon, 10 Jan 2022 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/tsmc-3nm/</guid>
+      <description>現況  目前台積電:
+ 7 奈米晶片產能以於 2021 已經大幅量產、產量穩定，比起 2018 年的產能多了四倍，獲得 IEEE 企業創新獎。6 奈米（7奈米進化版）於 2021 年底也將佔 7 奈米的一半產能。 5 奈米晶片目前主要於台南十八廠（fab18）量產，主要應用於 5G、AI、HPC、網路裝置。產能的部分也預計在 2023 年達到 2020 年的四倍。 美國 Arizona Fab21 主要生產 5 奈米先進製程計劃於 2024 年開始量產。  台積電三奈米規劃  台積電表示目前 3 奈米製程一切按照計劃，預計於 2022 下半年量產，且在 2023 年會生產 N31 (三奈米加強版)，台積電總總裁魏哲家有信心 N31 將是當時世界最厲害的晶片。三星則放話要於 2022 上半年量產 3 奈米（GAA架構），彎道超車台積電。
+台積電三奈米產能評估  3 奈米工廠月晶圓產能粗估為 3000-5000 片，但有最新消息指出台積電 3 奈米製程超出預期，前期預估月產 1-3 萬片，未來能達到 5 萬到 6 萬片，2023 可以擴大到 10.5 萬片。
+根據台積電公開聲明，2022 年一季起開始調漲晶圓代工報價，最高階 7 奈米以下製程調漲 10%；16 奈米以上成熟製程將調漲 10-20% 避免囤貨。漲價後 5 奈米晶圓價格大概為 18686 美元左右，而新製程 3 奈米因為於發展前期，加上晶片短缺供不應求，預計價格為 3 萬美元上下。依照 2022 年月產能大約 5 萬片，每個月的 3 奈米晶圓收入估計 15 億美元，而 2023 則將成長為 30 億美元。</description>
+    </item>
+    
+    <item>
+      <title>AI cup 得獎心得</title>
+      <link>https://jamesliao714.github.io/AICUP/</link>
+      <pubDate>Sun, 09 Jan 2022 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/AICUP/</guid>
+      <description>基本資訊   比賽名稱：AICUP 農業文章文字標註及辨識 Final Report 隊伍名稱：Rule-Based Method 隊員：姜宏昀 最終成績：創意獎（innovation award）、佳作（excellent award)  F1-score 0.8063660 precision : 0.82608 recall : 0.78756     Preprocessing   先針對主辦單位所提供的excel檔，創造出一個替換的dictionary  比如說 ，就把斜紋夜盜、黑蟲、行軍蟲&amp;hellip;全部換成斜紋夜蛾，方面後續model使用   對每篇文章利用ckiptagger做斷詞  在斷詞的時候要使用 coerce_dictionary 這個參數，這個參數可以讓主辦單位提供的keywords，被強制斷出來，不然可能會發生 &amp;ldquo;黑蟲&amp;rdquo; 被斷成 [&amp;ldquo;黑&amp;rdquo; &amp;ldquo;蟲&amp;rdquo;]   把斷好詞的結果做keywords的替換  ex: 把所有 &amp;ldquo;黑蟲&amp;rdquo; 換成 &amp;ldquo;斜紋夜盜&amp;rdquo; 這樣 在這一步的時候要注意一些特別case，避免被重複替換到   針對每篇文章，取出該篇文章所有出現的keyword集合  比如說 1.txt這篇文章 keyword_set = [&amp;ldquo;黑點病&amp;rdquo;,&amp;ldquo;降雨&amp;rdquo;,&amp;ldquo;文旦柚&amp;rdquo;,&amp;ldquo;鋅錳乃浦&amp;rdquo;]    Method  在這邊我們一開始的思路有幾種</description>
+    </item>
+    
+    <item>
+      <title>全球戰場個人淺見（一）</title>
+      <link>https://jamesliao714.github.io/battlefield1/</link>
+      <pubDate>Sun, 09 Jan 2022 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/battlefield1/</guid>
+      <description>參考書籍介紹   書名：全球戰場 Battlegrounds: The Fight to Defend the Free World 作者：H.R.MCMASTER  俄羅斯  蘇聯解體後 蘇聯自 1991 年解體後，原本的附屬國分分獨立，甚至頭像西方自由世界的懷抱。俄羅總統斯普丁（Vladimir Putin）能將一手爛牌打成一手好牌的招數就是：
+ 死不承認，製造會改變的假象 利用特工搞顛覆政權、搞暗殺 善用本國優勢（天燃氣、燃煤）控制歐盟國家（ex 德國） 假新聞，諜報機構（GRU）、網路攻擊  不得不說，我相當佩服這位前 KGB 探員的謀略才智，把西方國家搞的團團轉，對於普丁來說沒有絕對的友誼，只有絕對的利益。想一下比起中國，俄羅斯沒有誇張的人口紅利（僅一億多人口），經濟發展也落後不少，但蘇聯解體後至今仍能維持在國際一上定的影響力，雖然作法有些極端但仍值得我們研究。
+烏克蘭 烏克蘭是俄羅斯連結歐洲的重要大陸，蘇聯解體後北約開始東擴，嚴重影響俄國國安。這也是為什麼俄羅斯的底線是烏克蘭不能加入北約，一但烏克蘭加入後，俄國的西部將門戶大開，失去緩衝區遭到北約飛彈及軍事的威脅。
+近幾年俄國不斷的背後支持烏東親餓政權（叛軍），當然表面矢口否認，並且在近幾個月大舉增兵俄烏邊界，無疑是想要收下烏東，順道測試歐美底線。想打烏克蘭，俄國可以從烏克蘭北方的親餓獨裁政權-白俄羅斯、烏克蘭下方克里米雅半島、烏克蘭東部邊境三面夾擊，要拿下首都應該不會是件難事，但入侵後將面對大量國際制裁及譴責，還要平定戰後的內亂，對於俄國損失過大。所以我覺得最壞的情況應該會從烏東下手，畢竟那裡都是親俄政權把持，入侵後能快速穩定局勢。
+若雙方交戰，將會造成嚴重的國際能源供應鏈及糧食危機。烏東是糧產重地，出產玉米、黑麥、大麥，開戰後恐怕會造成能源通膨及糧食通膨的政治經濟雙重危機。另外，俄國的侵略舉動是否會對北京攻台灣立場造成影響，也值得我們關注。
+歐盟 面對俄國的霸道，歐盟只能輕描淡寫跟風譴責，甚至還支持烏國不該加入北約，原因大概就是大量依賴俄國的天然氣管線。過度的反俄舉動會造成天然氣價格貨供給的制裁，所以俄國利用這點狠狠的掐住歐盟脖子，使其像是一隻紙老虎。日前美國與歐盟國家曾對此進行論壇，似乎還沒找到對應措施來減少對俄國天然氣的依賴。目前西方最有利的籌碼應該就是尚未啟動的北溪二號天然氣管線（Nord Stream 2），此條管線穿過菠蘿的海直達德國歐洲，解決了目前俄國天然氣管線有 80% 經過烏克蘭的依賴性。這是一條對俄國相當有利的管線，除了減少過境烏克蘭的過路費，也能增加在歐洲天然氣市場的佔有率（目前約 1/4）。所以美國先前表示若俄國進行侵略，德國承諾會關閉此管線。
+中國  簡介 比起俄羅斯，中共也許在軍事方面及獨裁影響力的威脅還沒超越俄羅斯，但隨著中國近年來的崛起，無論經濟、知識、影嚮力等方面遠遠超越俄羅斯，成為世界第二大經濟體。對於美國而言，中國才是目前最危險的目標。近期中國在世界的戰狼外交、蠶食鯨吞、南海填島造陸與放話武統台灣，嚴重威脅美國第一島鏈安危及世界霸主寶座。
+ 中國與俄羅斯有一個共通點：就是想搗毀美國在二次世界大戰後所建立的自由開放、遵守法律秩序的世界，儘管有人認為 1990 年蘇聯解體時這個秩序已經所向無敵。俄國併吞克里米雅以及中國在南海的經略舉動都只是試探，想考驗美國與其他盟國的競爭意志，但這無疑嚴重壓縮了美國的影響力，讓中俄趁機將獨裁且封閉的系統取代自由開放的秩序。 在經歷完文章中的北京紫禁城之旅，作者表示中國認為美國已經露出敗象，退出戰場。美國必須重回戰場，以反制中共的威逼、利誘與掩飾行動。
+ 鄧小平在 1990 年代改革開放期間表示：「韜光養晦，絕不當頭」，如今在習近平的領導下已經完全背離。尤其是 2008 金融海嘯後，更讓中國有機會貶低西方自由經濟，相信自己的中央集權式經濟系統才是最好的，世界應該要遵循效仿中國的制度。共產黨認為此種經濟最大的優勢就是能整合政府、商界、學術與軍方能力，像是「中國製造 2025」、「一代一路」、「軍民合一」來成為世界霸主。
+軍民合一 中國透過民營企業來竊取他國機密已經是常態，
+華為 華為於 1987 年由前解放軍技術人員任正非創辦，在竊取斯科（cisco）的代源碼後成為世界一流的電信公司。2020 年，華為已經控制全球電信裝備產業 30% 的市場，並幾乎取得 5G 通信網路新興市場的主控權。
+中國製造 2025 與軍民合一就是建立在華為與中興通訊等電信業者之上，中共提供大金額補助其發展高端製造技術，計劃一種通訊骨幹，讓攸關全球經濟的數據流入中國，也就是所謂的「數據經濟」。如此一來，中共就可以取得世界重要情報，取得軍事與經濟利益。</description>
+    </item>
+    
+    <item>
+      <title>我對處理器市場的看法</title>
+      <link>https://jamesliao714.github.io/cpu/</link>
+      <pubDate>Mon, 03 Jan 2022 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/cpu/</guid>
+      <description>處理器效能關鍵   指令集架構（指令效率） 微架構（處理器內部設計）  高通為什麼銷量不好  高通（Qualcomm）新一代的處理器 - 驍龍 888（snapdragon888）採用三星 5 奈米製程，但其製程出現了漏電問題，導致高通驍龍 888 變成火龍 888，比前一代用台積電 7 奈米製程的驍龍865（snapdragon865）攻耗差約莫 40%，雖然功能跑分提升不少。
+高通似乎用中了三星的低價策略，重蹈復測 2015 前蘋果（Apple）將IPhone 6s 的 A9 處理器訂單分給三星的錯誤。高通除了將部分訂單改轉由台積電代工滅火，應該也會放眼開發新一代的產品，不然未來很有可能被聯發科天璣 9000（採用台積電 4 奈米製程）超越。
+特斯拉為什麼找三星代工自駕晶片  特斯拉（tesla）HW 4.0 自駕處理器採用三星 7 奈米製程，為什麼要用 7 奈米呢？從驍龍 888 的例子可以看出三星 5 奈米技術在極紫外光技術出了問題，所以決定使用較穩定的 7 奈米製程。至於為什麼 tesla 不找台積電代工，一方面是因為三星早已跟特斯拉合作研究相關晶片，另外就是價格上的確有相當大的優勢，台積電的競爭策略一直都不是「競價」。我認為或許特斯拉的晶片也不需要用到最先進的製程，所以成本為他們更重視的考量。不管怎樣，未來是否又會重蹈蘋果、高通錯誤值得我們看下去。</description>
+    </item>
+    
+    <item>
+      <title>台積電海外設廠思維</title>
+      <link>https://jamesliao714.github.io/tsmc-strategy/</link>
+      <pubDate>Sat, 25 Dec 2021 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/tsmc-strategy/</guid>
+      <description>簡介  台灣半導體產業巨頭台積電（TSMC）表示，將在中國大陸投資 28.87 億美元，增產車載半導體等產品。
+根據報導，台積電計劃在南京的現有工廠設置新生產線，預計 2023 年完成量產。這是台積電 2015 年宣布設立南京工廠以來首次在中國大陸進行大規模投資，此次增產投資是為滿足全球範圍內出現短缺的車載半導體需求。
+受新冠疫情的影響，全球晶片供應短缺曾一度造成不少汽車制造商被迫停產。在許多國家為了控制疫情而實行居家令期間，為了滿足 Work from home 和網上授課的需求，人們對於家用個人電腦和電子數碼產品的需求量也持續居高，導致晶片供應不足的問題至今沒有得到真正的解決。
+海水退了 才知道誰沒穿褲子  除了對於經濟生活運轉具有關鍵作用之外，晶片也具有重要的國際政治意義。在中美貿易戰中，晶片斷供成為美國制裁中國的一記「殺手鐧」。以前誇下海口要成為 5G 領頭羊，且實踐國產製造的華為也被打出原形。台積電此前已經宣布，鑑於美國商務部出台的制裁令，不再為中國科技業巨頭華為提供晶片。
+據日經新聞報道，這次台積電計劃在大陸地區增產的晶片是制程為28奈米的產品，計劃 2022 年下半年開始小批量生產，預計月產量能夠達到 4 萬片。該報道也指出，雖然這一制程的晶片比台積電在台灣生產的最尖端技術 3 奈米要落後好幾代，但是此次增產的 28 奈米產品卻是全球最為短缺的半導體之一。
+中國專家堅決反對  中國通信行業分析師項立剛在「新浪財經頭條」撰文，「強烈呼籲制止台積電南京廠擴產」，防止台積電采取「高端控制低端壓制」的策略。該文指出，台積電為了維持在晶片制造領域的優勢地位，配合美國的制裁，不讓大陸得到 14 奈米以下制程的高端晶片；同時由於中國大陸在 28 奈米以上制程的晶片領域，已經形成生產能力，台積電則要采取低價傾銷策略，把大陸晶片企業擠垮。
+文章寫道： 「在南京擴產，台積電成功地避免了台灣的缺水、缺電問題，又避免了美國建廠的高成本、低效率，達到壓制大陸晶片制造企業的效果，讓大陸的晶片企業無法與之競爭。」
+不過也有其他分析人士認為，這樣的警告實屬「危言聳聽」，台積電的舉動是應對全球缺晶片局面的「無可厚非之舉」，應該更理性的看待巨頭在華投資，而不是裹挾著所謂「愛國」情懷、「一刀切抵制外來戶」。
+目前中國大陸和台灣在晶片制造領域仍有相當明顯的差距。根據2020年11月傳出的消息，中國的晶片制造商中芯國際（SMIC）相當於 7 奈米級別的晶片工藝「取得突破」，業內人士估計實現量產要到 2022 至 2023 年。台積電在 2018 年就實現了7奈米的量產，而當下最先進的5奈米晶片，台積電 2020 年第二季度就已經實現量產。
+我的看法  張忠謀創辦人相當有智慧且歷練不少，2016 至南京設廠就是為了增加客戶、增加產能、減少運輸成本。如今也受美方政府大力投資，準備至美國亞利桑那洲（Arizona）建造 5 奈米廠服務當地客戶。
+很多人覺得去那邊設廠不是白白送技術過去嗎？我認為台積電是一間很優秀的公司，一切的作為都有它背後的利益考量。上述大陸專家擔心的部分我也相當認同，台積電至大陸設廠的原因除裡解決生產短缺，無疑是想吃下大陸 ic 設計市場這張大餅，提前佔好位子，如華為海斯等。至於技術安全的部分，我認為的確是個很大的挑戰，但大陸廠生產的晶片並非市場決戰勝負的的先進製程，所以相較大陸，美國的 5 奈米廠的確要特別注意。在根留台灣，保留營運及技術的前提下，我認為自動化工廠（智慧工廠）是台積電未來海外設廠的主要目標及發展。
+何謂根留台灣  台積電因台灣缺水缺電，對於台積電的營運及生產是相當大的挑戰，時不時有想要轉移至他國的風聲。但經濟部表示不用擔心，去年底台積電位於南科的先進製程 3 奈米廠，才剛舉行上樑典禮，並投資達 2 兆元。該公司現行的投資與未來的規劃，都是對台灣投資環境具體的信任投票。
+經濟部指出，台積電無論是營運總部、研發中心、人才招募、亦或是先進製程的首量產、以及周邊供應鏈的扶持，也都是以台灣為核心進行發展。目前台積電整體產能分布於台灣占比約達 9 成。</description>
+    </item>
+    
+    <item>
+      <title>Multi object tracking overview</title>
+      <link>https://jamesliao714.github.io/MOT-proposal/</link>
+      <pubDate>Tue, 21 Dec 2021 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/MOT-proposal/</guid>
+      <description>Literature Review  多目標跟蹤 (MOT) 主要任務是在給定視訊中同時對多個感興趣的目標進行定位，並且維持他們的標記 (ID)、記錄他們的軌跡。這些目標可以是路上的行人，路上的車輛，球場上的運動員，或者多組動物等等。而目前研究主要針對人類的原因有：
+ 與生活中其他物體相比，行人是典型的非剛體目標，MOT的理想例子。 在實際應用中存在大量的含有行人的視訊，這意味著巨大的商機。 據資料統計，至少70% 的MOT研究都是針對行人的。 現存的 MOT 研究大致可分為兩類：Detection-Based Tracking (DBT) 和 Detection-Free Tracking (DFT)，如圖一所示：  處理模式則分為 Online 跟蹤與 Offline 跟蹤。Online用到的幀是直到當前幀的前面幀信息，Offline 則可以用到未來幀信息。雖然 online 能運用的資訊較少，但可以提供 real time 追蹤，所以實用性較佳。 目前常見 Track by detection 的計算流程為： (1) 給定影片資訊 (2) 執行檢測器取得目標的邊界框，例如Faster rcnn、Yolo等 (3) 提取每個檢測到的物體的不同個特徵，通常是視覺和運動特徵 (4) 計算前後兩幀目標屬於同一個目標的相似度 (5) 關聯算法根據相似度為每個對象分配ID，例如匈牙利算法。 其中，Track by detection 表現影響最大的部分在於檢測，檢測結果的好壞對於最後指標的影響是最大的，舉例你設計出更好的關聯算法可能只提升了 0.1 點，但別人換了更好的檢測器可能就能漲好幾個點。所以前學術界 MOT 的研究重點逐漸從相似度計算加入更好的檢測器來精進 (Refine) 結果。用好的檢測器拉高結果的 Upper bound，再用好的關聯計算更有效地達到檢測的 Upper bound。近年也有越來越多的研究著重於同時 detect 與 track 的設計，例如 Transformer 的應用。 評估 MOT 效能最主要的評價指標就是MOTA，這個指標綜合了三點因素：FP、FN、IDsw。</description>
+    </item>
+    
+    <item>
+      <title>廖品捷</title>
+      <link>https://jamesliao714.github.io/about/</link>
+      <pubDate>Tue, 05 Oct 2021 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/about/</guid>
+      <description>What&amp;rsquo;s up 👋 This is James Liao, former Outstanding Youth of the year at NTUST. I am currently working on a M.S. degree of computer science at National Tsing Hua University, supervised by Professor Shang-Hong Lai. Our lab specializes in computer vision, including few-shot deteaction, human activity detection and 3D face team, while I am also specialized in NLP domain. I used to wrok as a RD inten in TSMC. If you have any question about me, please don&amp;rsquo;t hestitate to contact me via email or social media.</description>
+    </item>
+    
+    <item>
+      <title>TSMC 實習經驗</title>
+      <link>https://jamesliao714.github.io/tsmc_intern/</link>
+      <pubDate>Thu, 09 Sep 2021 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/tsmc_intern/</guid>
+      <description>背景  去年暑假到台積電的製造技術研發部門實習，因為本身對產業發展、國際政治非常有興趣，感謝友人牽能與一些高層及蘋果研發展處的長官吃飯，整個實習過程可說是收穫滿滿，但是也體驗到了不少公司的問題。剛好前陣子從美國來台受訓的外籍工程師，在網路上抱怨了一連串台積電在文化制度、系統、員工福利等方面的問題。我將利用親身經驗切入這個新聞，來深入探討我在這兩個月遇到的問題，以及為什麼我覺得 omiverse 應用在智慧工廠，能有效的解決問題，讓台積電能跨越智慧工廠開發的瓶頸。由於我實習的單位是跨領單位，所以主要想討論以下三個問題：
+ 智慧工廠貧頸 外籍工程師抱怨台積電軟體老舊、學習系統爛 系統軟體開發過程資料收集難  智慧工廠瓶頸  人工智慧（AI）的定義非常廣，機器學習在業界的應用相當廣，尤其是業界工廠的部分。身爲世界百大公司的台積電當然也提早佈局，除了工廠內部的設備相當先進，像是大家最熟悉由 ASML 所研發的極紫外光微影設備 (EUV)，晶片生產、派工的部份也近乎全自動化，並有許多部門負責智慧製造的執行與研發，但我認為台積電距離「智慧」工廠我覺得還有很長一段路要走。
+近幾年美國政府大力投資台積電至美國設廠，此動作一方面表達其技術的肯定，卻也間接承認美方對台海局勢不樂觀，不放心把晶片放在台灣生產。台積電當然也心知肚明美方用意，所以張忠謀創辦人表示「營運必須根留台灣」。我認為這句話背後的意涵很明顯的就是台積電未來海外設廠將朝向全自動化的智慧工廠，關鍵的技術、參數將由台灣這邊遠端操控。
+智慧工廠，台積電無疑已經近乎達成了自動化、智慧製造的部分，但仍有很多考驗需要解決。舉例來說，台積電對客戶晶片的品質要求非常高，一片晶圓上億個電晶體只要其中一個壞掉整片就要整片報廢，所以還是需要經過專業工程師花費大量時間檢查及確認。這也說明機器學習尤其是 deep learning，就算有 95%、99% 的準確率還是不夠的，加上其分類的方法就像黑盒子一樣難以解讀，導致大公司常常寧可用 Rule-based 的老方法來輔助產線，也不敢貿然將 AI 引入取代工程師。這也是為什麼台積電擁有許多先進機台及自動化工廠，擴廠時仍要不停的招募設備新人。目前業界在智慧工廠研發的貧頸也大多是在於人的「經驗」，處理未知、思考能力和責任感是人類不可被機器取代的關鍵，若想要真正達成智慧工廠我們還需要「人」的行為參數，以及讓我們蒐集、模擬更複雜的資訊的平台，才能建造出一個有「腦」「眼」「手」讓 AI 跨出輔助的模型。
+外籍工程師抱怨  回到外籍工程師提出的疑慮，公司內部的軟體相當老舊且缺乏整合、美感，系統相容性是主要的考量。台積電並非軟體或新創公司，在沒有 100% 的保握下，公司不會放棄產能來更新軟體，避免未來發生不必要的麻煩。這也造成了所謂的老舊體系，許多麻煩任務、重疊的系統安排讓整體效率相當不順暢。員工的訓練上，內部號稱最強的 E-learning 系統其實相當過時，其對於員工的訓練相當有限，尤其是在疫情爆發後，軟體、研發單位的工廠 (fab) 內部的訓練參觀都被取消或推延，導致開發者與產線工程師之間產生隔閡，導致開發過程相當沒效率，雙方配合的態度都不太積極。我認為未來將進入與病毒共存的時代，員工訓練的線上資源會越來越重要，保護公司技術財產之餘，也要提供員工更好的學習平台跟環境，才能符合台積鼓吹不斷學習的企業文化。
+資料搜集困難  再者，有鑒於大陸、競爭對手不斷地想竊取台積電技術的，公司的內外管控相當嚴格。這對於開發者尤其是軟體開發來說相當不友善。舉個例子來說，python 的套件需要手動安裝、使用 GPU 訓練或相關開發系統需要排隊使用。我在實習期間也相當困擾，整個開發流程相當不順暢，不像學校可以專注在研究上，而是要花很多時間去處理瑣碎的技術環境問題。我們常開玩笑說我們不是研發工程師，而是「套件」工程師。資料搜集也是一大難題，除了權限的層層關卡，各廠不同的系統和機台也導致資料取得的難度相當高，再加上機台蒐集到的數據常有嚴重的 data imbalance 的情況發生，許多研發的專案常常都無疾而終、胎死腹中。</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesliao714.github.io/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jamesliao714.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+  </channel>
+</rss>

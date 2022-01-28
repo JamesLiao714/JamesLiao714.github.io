@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multi object tracking overview</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+
+
+<meta property="og:title" content="Multi object tracking overview" />
+<meta property="og:description" content="Literature Review  多目標跟蹤 (MOT) 主要任務是在給定視訊中同時對多個感興趣的目標進行定位，並且維持他們的標記 (ID)、記錄他們的軌跡。這些目標可以是路上的行人，路上的車輛，球場上的運動員，或者多組動物等等。而目前研究主要針對人類的原因有：
+ 與生活中其他物體相比，行人是典型的非剛體目標，MOT的理想例子。 在實際應用中存在大量的含有行人的視訊，這意味著巨大的商機。 據資料統計，至少70% 的MOT研究都是針對行人的。 現存的 MOT 研究大致可分為兩類：Detection-Based Tracking (DBT) 和 Detection-Free Tracking (DFT)，如圖一所示：  處理模式則分為 Online 跟蹤與 Offline 跟蹤。Online用到的幀是直到當前幀的前面幀信息，Offline 則可以用到未來幀信息。雖然 online 能運用的資訊較少，但可以提供 real time 追蹤，所以實用性較佳。 目前常見 Track by detection 的計算流程為： (1) 給定影片資訊 (2) 執行檢測器取得目標的邊界框，例如Faster rcnn、Yolo等 (3) 提取每個檢測到的物體的不同個特徵，通常是視覺和運動特徵 (4) 計算前後兩幀目標屬於同一個目標的相似度 (5) 關聯算法根據相似度為每個對象分配ID，例如匈牙利算法。 其中，Track by detection 表現影響最大的部分在於檢測，檢測結果的好壞對於最後指標的影響是最大的，舉例你設計出更好的關聯算法可能只提升了 0.1 點，但別人換了更好的檢測器可能就能漲好幾個點。所以前學術界 MOT 的研究重點逐漸從相似度計算加入更好的檢測器來精進 (Refine) 結果。用好的檢測器拉高結果的 Upper bound，再用好的關聯計算更有效地達到檢測的 Upper bound。近年也有越來越多的研究著重於同時 detect 與 track 的設計，例如 Transformer 的應用。 評估 MOT 效能最主要的評價指標就是MOTA，這個指標綜合了三點因素：FP、FN、IDsw。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jamesliao714.github.io/MOT-proposal/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-12-21T08:06:25+06:00" />
+<meta property="article:modified_time" content="2021-12-21T08:06:25+06:00" />
+
+
+
+    
+    
+<meta name="description" content="Multi object tracking overview" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+    
+        
+        
+          
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-122321624-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+        
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      James Blog</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/about/" title="Introduction">Introduction</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/AICUP/" title="AI cup 得獎心得">AI cup 得獎心得</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/MOT-proposal/" title="MOT overview">MOT overview</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/tsmc_intern/" title="TSMC 實習經驗">TSMC 實習經驗</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/nft-meata/" title="元宇宙、NFT 市場看法">元宇宙、NFT 市場看法</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/battlefield1/" title="全球戰場（ㄧ）">全球戰場（ㄧ）</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/tsmc-3nm/" title="台積電三奈米挑戰">台積電三奈米挑戰</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/tsmc-strategy/" title="台積電海外設廠思維">台積電海外設廠思維</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/cpu/" title="處理器市場的看法">處理器市場的看法</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://jamesliao714.github.io/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/James_huc9a317bbb7c0a6082890538ebe7af430_129353_120x120_fit_q75_box.jpg' alt="Author Image">
+          <h5 class="author-name">James Liao</h5>
+          <p>December 21, 2021</p>
+        </div>
+
+        <div class="title">
+          <h1>Multi object tracking overview</h1>
+        </div>
+        
+        <div class="post-content" id="post-content">
+          <h2 id="literature-review">Literature Review</h2>
+<hr>
+<p>多目標跟蹤 (MOT) 主要任務是在給定視訊中同時對多個感興趣的目標進行定位，並且維持他們的標記 (ID)、記錄他們的軌跡。這些目標可以是路上的行人，路上的車輛，球場上的運動員，或者多組動物等等。而目前研究主要針對人類的原因有：</p>
+<ol>
+<li>與生活中其他物體相比，行人是典型的非剛體目標，MOT的理想例子。</li>
+<li>在實際應用中存在大量的含有行人的視訊，這意味著巨大的商機。</li>
+<li>據資料統計，至少70% 的MOT研究都是針對行人的。
+現存的 MOT 研究大致可分為兩類：Detection-Based Tracking (DBT) 和 Detection-Free Tracking (DFT)，如圖一所示：</li>
+</ol>
+<p><img src="https://i.imgur.com/Dmm4eBX.png" alt="圖一、DBT 與 DFT"></p>
+<p>處理模式則分為 Online 跟蹤與 Offline 跟蹤。Online用到的幀是直到當前幀的前面幀信息，Offline 則可以用到未來幀信息。雖然 online 能運用的資訊較少，但可以提供 real time 追蹤，所以實用性較佳。
+目前常見 Track by detection 的計算流程為： (1) 給定影片資訊 (2) 執行檢測器取得目標的邊界框，例如Faster rcnn、Yolo等  (3) 提取每個檢測到的物體的不同個特徵，通常是視覺和運動特徵 (4) 計算前後兩幀目標屬於同一個目標的相似度 (5) 關聯算法根據相似度為每個對象分配ID，例如匈牙利算法。
+其中，Track by detection 表現影響最大的部分在於檢測，檢測結果的好壞對於最後指標的影響是最大的，舉例你設計出更好的關聯算法可能只提升了 0.1 點，但別人換了更好的檢測器可能就能漲好幾個點。所以前學術界 MOT 的研究重點逐漸從相似度計算加入更好的檢測器來精進 (Refine) 結果。用好的檢測器拉高結果的 Upper bound，再用好的關聯計算更有效地達到檢測的 Upper bound。近年也有越來越多的研究著重於同時 detect 與 track 的設計，例如 Transformer 的應用。
+評估 MOT 效能最主要的評價指標就是MOTA，這個指標綜合了三點因素：FP、FN、IDsw。</p>
+<p><img src="https://i.imgur.com/sH4mquY.png" alt="圖二、評估指標"></p>
+<p>目前最經常被使用的資料集是 <strong>MOT challenge</strong>，這個資料集主要是偵測行人，排榜的部分分為 private 跟 public leaderboard，public leaderboard 主要測試 tracker 的表現，要用指定的檢測器（faster RCNN等）， private 則沒有這個限制。 我們也主要針對這個資料集去評斷 MOT 方法的表現，但是仍然存在<strong>資料集的規模較小</strong>和<strong>資料集的內容過於簡單</strong>的問題。</p>
+<h2 id="unsolved-problems-and-challenges">Unsolved problems and challenges</h2>
+<hr>
+<p>多目標跟蹤 (MOT) 因其學術和商業潛力，在計算機視覺中逐漸備受關注。儘管如今已經有多種多樣的方法來處理這個課題，但從 Multiple object tracking : A literature review [Luo et al. 2021] 中，我們發仍現多目標跟蹤在確定目標的數量（通常隨時間變化）及維持各自的 ID 還有很多問題需要解決：</p>
+<ol>
+<li>目標頻繁重疊遮擋</li>
+<li>處理新目標的出現和老目標的消失</li>
+<li>處理目標丟失一段時間後再重新出現的再識別</li>
+<li>跟蹤目標的相似度識別（上一幀與下一幀的匹配）</li>
+</ol>
+<p>同時這也代表它仍然存在許多發展的機會。例如降低ID switch、提升每秒顯示禎數 (FPS)、Bounding box 形狀匹配等 [Voigtlaender et al. 2019]。隨著 Transformer 的興起，有越來越多人將其應用在 MOT 上，設法解決 Track by detection 太依賴檢視器的缺點，但其運算速度和計算量也成了新的挑戰。我們希望根據目前 MOT dataset (MOT16, MOT17, MOT20) 前幾名且運用不同 Tracking 方式的論文 [Zhang et al. 2021] [Wang et al. 2021] [Chu et al. 2021]，提出一個創新的放法，結合 Track by detection 和 Transformer 的優點，並加入 Bounding box uncertainty [He et al. 2019] 的概念來更有效的解決遮擋、交錯等問題，達成 state of the art。</p>
+<h2 id="survey-representative-papers">Survey representative papers</h2>
+<hr>
+<p>我主要針對近年 MOT challenge 排名前段的論文進行研究，尋找更好的機會及方法：</p>
+<ol>
+<li>
+<p>Zhang, Y., Sun, P., Jiang, Y., Yu, D., Yuan, Z., Luo, P., &hellip; &amp; Wang, X. (2021). ByteTrack: Multi-Object Tracking by Associating Every Detection Box. arXiv preprint arXiv:2110.06864.</p>
+<p>這篇論文目前在 MOT17, MOT20 challenge 中排名第一。論文提到近年來，物件追蹤做的越來越好，在 MOT challenge 比較容易偵測出來的人已經被配對的很好，也就是 Detection score 較高的物體。目前想把準確度再提升，就要解決所謂的遮擋問題，有就是 Detection score 較低的物體往往會被當成背景被捨去掉。因此作者提出了 tracking BY associaTing Every detection box（BYTE）的方式，把低分數的人跟背景分辨出來，並且批配在一起，解決遮擋問題。我認為這樣的方法雖然簡單有效，但面對更複雜的資料集是否能維持高效高分的表現，值得深思。</p>
+ <img src="https://i.imgur.com/uQmYnmc.png" width="500" title ="圖三、BYTE在表現上勝過業界常用SORT、DeepSORT" >
+</li>
+<li>
+<p>Wang, Q., Zheng, Y., Pan, P., &amp; Xu, Y. (2021). Multiple Object Tracking with Correlation Learning. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 3876-3886).</p>
+<p>此篇論文作者提出的模型 CorrTracker 能夠分析目標物件周圍場景與目標的相關性，讓 feature map 像是上圖 (b) 一樣，能夠輕鬆找出目標</p>
+ <img src="https://i.imgur.com/yNWWtaM.jpg" width="500">
+<p>本篇論文的模型是以 FairMOT 來做更改，使用方法分成三的步驟，分別是一般的特徵抽取、從時空相關性中學習，並預測出檢測結果、執行數據關聯，並將檢測結果分配到最可能的路徑中。下圖證明使用兩幀當輸入且使用他們提出的板模可以達到最高準確度</p>
+ <img src="https://i.imgur.com/2Se4bJi.png" width="500">
+<p>下面是 CorrTracker 跟其他現有模型的比較。可見 CorrTrack 在速度及準確率的 tradeoff 表現非常好。</p>
+ <img src="https://i.imgur.com/Jypv1Ee.jpg" width="500">
+<p>我認為這篇論文覺沒有提出 correlation 詳細一點的實作內容，對於 Self-supervised Feature Learning 的解釋也有點含糊帶過，但不得不說，他實驗的準確度高得驚人，而且也入選 CVPR2021，所以他提出的理論是有道理的，如果能夠把目標附近的特徵也學進去，對目標追蹤來說會有很大的幫助。雖說 CorrTracker 的準確度很高，ID switch 也發生的很少，但速度還是有點偏慢，反觀 FairMOT 雖然精準度和其他都輸 CorrTracker 一點，可是速度卻可以是他的接近兩倍，這點值得我們深思。</p>
+</li>
+<li>
+<p>Chu, P., Wang, J., You, Q., Ling, H., &amp; Liu, Z. (2021). TransMOT: Spatial-Temporal Graph Transformer for Multiple Object Tracking. arXiv preprint arXiv:2104.00194.</p>
+<p>這篇論文目前在 MOT17, MOT20 challenge 中排名第二。作者提出了 Spatial-Temporal Graph Transformer（STGT）的解決方案，該方案利用功能強大的 Graph transformers 有效地對對象之間的時空交互進行建模。由於是 sparse，所以在訓練和推理時的計算十分高效。由於探索了目標間的結構信息，所以比一般的 Transformer 也更有效。但 Transformer 的缺點就是運算速度，能否實現 real time 依然是最大的考驗。</p>
+  <img src="https://i.imgur.com/bPNarKF.jpg" width="500">
+</li>
+</ol>
+<h2 id="reference">Reference</h2>
+<hr>
+<p>[Luo et al. 2021] Luo, W., Xing, J., Milan, A., Zhang, X., Liu, W., &amp; Kim, T. K. (2021). Multiple object tracking: A literature review. Artificial Intelligence, 293, 103448.</p>
+<p>[He et al. 2019] He, Y., Zhu, C., Wang, J., Savvides, M., &amp; Zhang, X. (2019). Bounding box regression with uncertainty for accurate object detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 2888-2897).</p>
+<p>[Zhang et al. 2021] Zhang, Y., Sun, P., Jiang, Y., Yu, D., Yuan, Z., Luo, P., … &amp; Wang, X. (2021). ByteTrack: Multi-Object Tracking by Associating Every Detection Box. arXiv preprint arXiv:2110.06864.</p>
+<p>[Wang et al. 2021] Wang, Q., Zheng, Y., Pan, P., &amp; Xu, Y. (2021). Multiple Object Tracking with Correlation Learning. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 3876-3886).</p>
+<p>[Chu et al. 2021] Chu, P., Wang, J., You, Q., Ling, H., &amp; Liu, Z. (2021). TransMOT: Spatial-Temporal Graph Transformer for Multiple Object Tracking. arXiv preprint arXiv:2104.00194.</p>
+<p>[Voigtlaender et al. 2019] Voigtlaender, P., Krause, M., Osep, A., Luiten, J., Sekar, B. B. G., Geiger, A., &amp; Leibe, B. (2019). Mots: Multi-object tracking and segmentation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 7942-7951).</p>
+<p>[Zhang et al. 2020] Zhang, Y., Wang, C., Wang, X., Zeng, W., &amp; Liu, W. (2020). Fairmot: On the fairness of detection and re-identification in multiple object tracking. arXiv preprint arXiv:2004.01888.</p>
+
+        </div>
+
+        
+        <div class="row pl-3 pr-3">
+        
+        <div class="col-md-6 share-buttons">
+        
+          </div>
+
+        
+        
+          
+            
+          
+          <div class="col-md-6 btn-improve-page">
+             
+               <a href="https://JamesLiao714.github.io//edit/main/content/posts/MOT.md" title="Improve this page" target="_blank" rel="noopener">
+            
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+        </div>
+
+
+
+      
+      <hr />
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+    
+    
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/AICUP/" title="AI cup 得獎心得" class="btn btn-outline-info">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">AI cup 得獎心得</div>
+      </a>
+    </div>
+  
+  
+      
+      
+        
+      
+      <div class="col-md-6 next-article">
+        <a href="/tsmc_intern/" title="TSMC 實習經驗" class="btn btn-outline-info">
+          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+          <div class="next-prev-text">TSMC 實習經驗</div>
+        </a>
+      </div>
+    
+</div>
+
+      <hr />
+
+      
+      
+        
+      
+      
+      
+
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#literature-review">Literature Review</a></li>
+    <li><a href="#unsolved-problems-and-challenges">Unsolved problems and challenges</a></li>
+    <li><a href="#survey-representative-papers">Survey representative papers</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#about">About</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#experiences">Experiences &amp; Education</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#recent-posts">Recent Posts</a>
+                </li>
+              
+              
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:s9446760133@gmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>s9446760133@gmail.com</span>
+                </a></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2020 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

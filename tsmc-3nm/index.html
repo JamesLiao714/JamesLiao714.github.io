@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>台積電三奈米挑戰</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+
+
+<meta property="og:title" content="台積電三奈米挑戰" />
+<meta property="og:description" content="現況  目前台積電:
+ 7 奈米晶片產能以於 2021 已經大幅量產、產量穩定，比起 2018 年的產能多了四倍，獲得 IEEE 企業創新獎。6 奈米（7奈米進化版）於 2021 年底也將佔 7 奈米的一半產能。 5 奈米晶片目前主要於台南十八廠（fab18）量產，主要應用於 5G、AI、HPC、網路裝置。產能的部分也預計在 2023 年達到 2020 年的四倍。 美國 Arizona Fab21 主要生產 5 奈米先進製程計劃於 2024 年開始量產。  台積電三奈米規劃  台積電表示目前 3 奈米製程一切按照計劃，預計於 2022 下半年量產，且在 2023 年會生產 N31 (三奈米加強版)，台積電總總裁魏哲家有信心 N31 將是當時世界最厲害的晶片。三星則放話要於 2022 上半年量產 3 奈米（GAA架構），彎道超車台積電。
+台積電三奈米產能評估  3 奈米工廠月晶圓產能粗估為 3000-5000 片，但有最新消息指出台積電 3 奈米製程超出預期，前期預估月產 1-3 萬片，未來能達到 5 萬到 6 萬片，2023 可以擴大到 10.5 萬片。
+根據台積電公開聲明，2022 年一季起開始調漲晶圓代工報價，最高階 7 奈米以下製程調漲 10%；16 奈米以上成熟製程將調漲 10-20% 避免囤貨。漲價後 5 奈米晶圓價格大概為 18686 美元左右，而新製程 3 奈米因為於發展前期，加上晶片短缺供不應求，預計價格為 3 萬美元上下。依照 2022 年月產能大約 5 萬片，每個月的 3 奈米晶圓收入估計 15 億美元，而 2023 則將成長為 30 億美元。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jamesliao714.github.io/tsmc-3nm/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-10T08:06:25+06:00" />
+<meta property="article:modified_time" content="2022-01-10T08:06:25+06:00" />
+
+
+
+    
+    
+<meta name="description" content="台積電三奈米挑戰" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+    
+        
+        
+          
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-122321624-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+        
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      James Blog</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/about/" title="Introduction">Introduction</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/AICUP/" title="AI cup 得獎心得">AI cup 得獎心得</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/MOT-proposal/" title="MOT overview">MOT overview</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/tsmc_intern/" title="TSMC 實習經驗">TSMC 實習經驗</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/nft-meata/" title="元宇宙、NFT 市場看法">元宇宙、NFT 市場看法</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/battlefield1/" title="全球戰場（ㄧ）">全球戰場（ㄧ）</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/tsmc-3nm/" title="台積電三奈米挑戰">台積電三奈米挑戰</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/tsmc-strategy/" title="台積電海外設廠思維">台積電海外設廠思維</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/cpu/" title="處理器市場的看法">處理器市場的看法</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://jamesliao714.github.io/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/James_huc9a317bbb7c0a6082890538ebe7af430_129353_120x120_fit_q75_box.jpg' alt="Author Image">
+          <h5 class="author-name">James Liao</h5>
+          <p>January 10, 2022</p>
+        </div>
+
+        <div class="title">
+          <h1>台積電三奈米挑戰</h1>
+        </div>
+        
+        <div class="post-content" id="post-content">
+          <h4 id="現況">現況</h4>
+<hr>
+<p><strong>目前台積電:</strong></p>
+<ul>
+<li>7 奈米晶片產能以於 2021 已經大幅量產、產量穩定，比起 2018 年的產能多了四倍，獲得 IEEE 企業創新獎。6 奈米（7奈米進化版）於 2021 年底也將佔 7 奈米的一半產能。</li>
+<li>5 奈米晶片目前主要於台南十八廠（fab18）量產，主要應用於 5G、AI、HPC、網路裝置。產能的部分也預計在 2023 年達到 2020 年的四倍。</li>
+<li>美國 Arizona Fab21 主要生產 5 奈米先進製程計劃於 2024 年開始量產。</li>
+</ul>
+<h4 id="台積電三奈米規劃">台積電三奈米規劃</h4>
+<hr>
+<p>台積電表示目前 3 奈米製程一切按照計劃，預計於 2022 下半年量產，且在 2023 年會生產 N31 (三奈米加強版)，台積電總總裁魏哲家有信心 N31 將是當時世界最厲害的晶片。三星則放話要於 2022 上半年量產 3 奈米（GAA架構），彎道超車台積電。</p>
+<h4 id="台積電三奈米產能評估">台積電三奈米產能評估</h4>
+<hr>
+<p>3 奈米工廠月晶圓產能粗估為 3000-5000 片，但有最新消息指出台積電 3 奈米製程超出預期，前期預估月產 1-3 萬片，未來能達到 5 萬到 6 萬片，2023 可以擴大到 10.5 萬片。</p>
+<p>根據台積電公開聲明，2022 年一季起開始調漲晶圓代工報價，最高階 7 奈米以下製程調漲 10%；16 奈米以上成熟製程將調漲 10-20% 避免囤貨。漲價後 5 奈米晶圓價格大概為 18686 美元左右，而新製程 3 奈米因為於發展前期，加上晶片短缺供不應求，預計價格為 3 萬美元上下。依照 2022 年月產能大約 5 萬片，每個月的 3 奈米晶圓收入估計 15 億美元，而 2023 則將成長為 30 億美元。</p>
+<p>粗估晶圓毛利達到 60%，最終利潤為 40%。2023 年後 3 奈米晶圓月度淨利潤約 12 億美元，一年約 144 億美元。投資 3nm 產線成本約 200 億美元，所以估計兩年內回本，5 年內利潤達到平均預期（40%）。</p>
+<h4 id="三星優勢">三星優勢</h4>
+<hr>
+<p>三星是國家大企業擁有相當資源，其最大客戶是高通，除了提供優惠報價，三星手機也與高通互助，兩者之間有相當密切的合作關係。但在晶片代工部份，台積電產能、品質仍大幅領先，三星 EUV 技術仍有待加強。</p>
+<h4 id="為何-iphone-14-仍採用-5-奈米晶片">為何 iphone 14 仍採用 5 奈米晶片</h4>
+<hr>
+<p>我認為原因有兩點：</p>
+<ol>
+<li>
+<p>三奈米製程成本飆高，約從一萬美金飆高到兩萬美金。所以客戶一時無法接受，須與台積電溝通協調，降低 EUV 曝光道數減少成本。</p>
+</li>
+<li>
+<p>台積電 3 奈米將於 2022 下半年量產，趕不上蘋果生產。之前台積 5 奈米於 2020 第二季（4月）量產，所以才剛好趕上蘋果。目前預計蘋果新機將採用台積電 4 奈米（5奈米加強版）晶片。</p>
+</li>
+</ol>
+<h4 id="未來-3-奈米客戶">未來 3 奈米客戶</h4>
+<hr>
+<p>未來的大客戶包括蘋果 Apple silicon 將繼續與台積電合作製造  macbook 等產品晶片。其他包括 intel、graphcore 等都會採用，且三星 EUV 技術相當不成熟，目前仍在改進。所以我相當看好台積電 3 奈米發展持續領先。</p>
+<h4 id="台積電為-intel-開-3-奈米專線">台積電為 intel 開 3 奈米專線</h4>
+<hr>
+<p>面對 AMD、Nvidia 強烈競爭，Intel 決定採用台積電 3 奈米製程避免被蠶食鯨吞。</p>
+<p>目前 Intel 的競爭方針有三大路線：</p>
+<ol>
+<li>持續發展自身先進封裝（實力與台積並駕齊驅）及 ic 設計</li>
+<li>消除 AMD、Nvidia 採用台積晶片的競爭優勢</li>
+<li><strong>騰出資源</strong>全力投入製程，先用台積電 3 奈米製成穩住陣腳</li>
+</ol>
+<p>台積電考驗：</p>
+<ol>
+<li>Intel, Nvidia, AMD 資源產能分配</li>
+<li>幫 Intel 製造是否能拿到好處，還是幫 Intel 大忙，讓其穩住陣腳未來超車？</li>
+</ol>
+<p>我認為台積電此舉可以提升晶片代工市場佔有率，且讓產能需求持續緊繃掌握定價籌碼，並持續精進成熟 CPU, GPU 的製造能力，對未來公司的發展百利無害。</p>
+<p>Intel 的部分，季辛格（Pat Gelsinger）看似已經打定主意要外包幾片代工，借外面的資源打贏 AMD 和 Nvidia。如果台積電拒絕，Intel 有很大機會找上 Samsung。也許幾年之後 Intel 注定會是台積電的敵人，但現在至少可以讓 Intel 當客戶大撈一筆，而不是放其當敵人（三星）的客戶。此外，拒絕代工也會讓台積電喪失專業代工廠的信譽!</p>
+
+        </div>
+
+        
+        <div class="row pl-3 pr-3">
+        
+        <div class="col-md-6 share-buttons">
+        
+          </div>
+
+        
+        
+          
+            
+          
+          <div class="col-md-6 btn-improve-page">
+             
+               <a href="https://JamesLiao714.github.io//edit/main/content/posts/%e5%8f%b0%e7%a9%8d%e9%9b%bb%e4%b8%89%e5%a5%88%e7%b1%b3%e8%80%83%e9%a9%97.md" title="Improve this page" target="_blank" rel="noopener">
+            
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+        </div>
+
+
+
+      
+      <hr />
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+    
+  
+  
+
+  
+  
+
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/battlefield1/" title="全球戰場個人淺見（一）" class="btn btn-outline-info">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">全球戰場個人淺見（一）</div>
+      </a>
+    </div>
+  
+  
+      
+      
+        
+      
+      <div class="col-md-6 next-article">
+        <a href="/tsmc-strategy/" title="台積電海外設廠思維" class="btn btn-outline-info">
+          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+          <div class="next-prev-text">台積電海外設廠思維</div>
+        </a>
+      </div>
+    
+</div>
+
+      <hr />
+
+      
+      
+        
+      
+      
+      
+
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#現況">現況</a></li>
+            <li><a href="#台積電三奈米規劃">台積電三奈米規劃</a></li>
+            <li><a href="#台積電三奈米產能評估">台積電三奈米產能評估</a></li>
+            <li><a href="#三星優勢">三星優勢</a></li>
+            <li><a href="#為何-iphone-14-仍採用-5-奈米晶片">為何 iphone 14 仍採用 5 奈米晶片</a></li>
+            <li><a href="#未來-3-奈米客戶">未來 3 奈米客戶</a></li>
+            <li><a href="#台積電為-intel-開-3-奈米專線">台積電為 intel 開 3 奈米專線</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#about">About</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#experiences">Experiences &amp; Education</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#recent-posts">Recent Posts</a>
+                </li>
+              
+              
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:s9446760133@gmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>s9446760133@gmail.com</span>
+                </a></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2020 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>
