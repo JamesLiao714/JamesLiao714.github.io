@@ -177,6 +177,24 @@ Initial setup Search depends on additional output content type of JSON in config
     </item>
     
     <item>
+      <title>Luna 介紹</title>
+      <link>https://jamesliao714.github.io/Luna/</link>
+      <pubDate>Mon, 31 Jan 2022 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/Luna/</guid>
+      <description>簡介  Terra 生態系採用「雙代幣」制度，這也是 Terra 最知名的兩個幣種：
+ Luna UST  Luna 是月亮的意思，Terra 則是代表地球。Luna 是 Terra 生態系的治理、質押驗證代幣。
+Terra 所採用的是權益證明機制（PoS），驗證者透過質押 Luna 取得治理權，驗證交易保持區塊鏈運作，並從中獲取收益。
+除此之外，Terra 官方還會將每筆交易的 0.5% 手續費作為獎勵分發至 Luna 持有者手中。
+因此持有 Luna 就相當於在投資與支持 Terra 生態系，小型持有者也可以透過委託質押給大型節點來賺取額外收入。
+Luna 的總發行量為 10 億枚，一旦超過此數目時，官方就會開始熔毀額外的 Luna，確保市場流通量為 10 億枚，維持通縮狀態。
+Luna 從 2021 年初的 0.7 美元，成長到 2021 年 9 月約 28 美元，整體漲幅超過 40 倍。
+你也可以透過在 Terra Station 上質押 Luna，獲得接下來 Terra 生態系的空投幣。
+真正去中心化的 UST 穩定幣  TerraUSD 是 Terra 生態系所推出的一種基於演算法的穩定幣，簡稱 UST ，其價值與美元掛勾。
+一般穩定幣（例如 USDT、USDC）的發行權都是掌握在某個組織或公司， 並且會在託管機構裡面存入等值資產，是基於**「信託」機制**的加密貨幣。</description>
+    </item>
+    
+    <item>
       <title>Solana 介紹</title>
       <link>https://jamesliao714.github.io/solana/</link>
       <pubDate>Mon, 31 Jan 2022 08:06:25 +0600</pubDate>
