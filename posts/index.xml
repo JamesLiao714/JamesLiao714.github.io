@@ -6,7 +6,7 @@
     <description>Recent content in Posts on James Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Jan 2022 08:06:25 +0600</lastBuildDate><atom:link href="https://jamesliao714.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Feb 2022 08:06:25 +0600</lastBuildDate><atom:link href="https://jamesliao714.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Resultados de Búsqueda</title>
       <link>https://jamesliao714.github.io/search/</link>
@@ -174,6 +174,33 @@ No content shown here is rendered, all content is based in the template layouts/
 Setting a very low sitemap priority will tell search engines this is not important content.
 This implementation uses Fusejs, jquery and mark.js
 Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Chainlink 介紹</title>
+      <link>https://jamesliao714.github.io/chainlink/</link>
+      <pubDate>Tue, 01 Feb 2022 08:06:25 +0600</pubDate>
+      
+      <guid>https://jamesliao714.github.io/chainlink/</guid>
+      <description>前言  由於區塊鏈不可竄改與永久保存的特性，許多產業開始藉此發展區塊鏈相關技術。然而，為了保持資訊安全性，基本上區塊鏈網路的建構是封閉的，無法接收區塊鏈以外的資訊。因此，在不同區塊鏈上運行的專案需要借助預言機服務的幫忙，來協助我們將資料輸入區塊鏈中。
+什麼是預言機？  預言機（Oracle）是一種第三方服務軟體，負責將現實世界的資料傳送到區塊鏈網路中。由於區塊鏈網路是一個封閉的系統，智能合約只能夠提取區塊鏈上的資料，無法獲得現實世界的資訊。因此，若是希望要讓智能合約成功的與人互動，就必須要透過預言機來將資料導入到區塊鏈中。 預言機可以透過 Web API 抓取現實世界的資料，例如：天氣、幣價、球賽結果等任何已經發生的事，並且在智能合約呼叫時根據需求將所需要的資料輸入區塊鏈網路中，提供智能合約做使用。相反的，如果少了預言機的存在，區塊鏈的應用將受到很大的限制。一旦無法取用現實世界的資料，智能合約將只能使用已經寫死在自己或是其他智能合約中的資料。這會嚴重的限制了區塊鏈的靈活性，也降低其便利性，使區塊鏈產業難以帶來落地應用。
+由此可知，預言機的存在對區塊鏈產來說至關重要。對於提倡去中心化的區塊鏈產業來說，一個中心化的預言機系統不僅會與區塊鏈的本質相違背，也會增加駭客攻擊導致輸入錯誤資料的風險。而這些擔憂，也帶來了 Chainlink 的問世。
+Chainlink 預言機運作模式  節點：能確焦資料來源的可信度
+為了避免單一數據來源被駭客攻擊，Chainlink 與區塊鏈類似，使用許多節點來獲取現實世界的資訊。
+當智能合約發送資料要求給節點時，每個節點各自透過 Web API 抓取資料，並回傳給智能合約。這樣的機制能夠確保資料來源的可信度，免除資料錯誤所帶來的危機，同時減少駭客入侵資料庫並竄改資料的風險。
+因此，節點就是鏈下數據的提供者。要成為節點必須質押一定數量的 LINK 代幣，正確提供資料的話則是能夠賺取 LINK 代幣。
+提供的資料錯誤時，Chainlink 的智能合約會將原本質押的 LINK 扣除作為懲罰。藉由這樣的獎懲機制來維持資料來源的穩定性與正確性。
+Chainlink 中介層：負責與其他智能合約互動
+除了在鏈下搜集資料的節點外，Chainlink 也有鏈上的智能合約，作為中介層。這個中介層會負責與其他智能合約互動，將需要的資料傳遞給節點，讓結點去搜尋。
+在節點搜尋完資料並回傳之後，中介層還有一個「聚合」的功能。由於是從許多節點搜集而來，來源有所不同的資料，所以會在這裡進行資料整理、比對。接著，智能合約會在這些資料中「取得共識」，去除掉離散值並且整理出相對正確的資料回傳給當初呼叫的智能合約。若是在經過多筆資料的比對之後，發現有錯誤資料，則會扣除該節點質押的 LINK 代幣作為懲罰。 LINK 的核心技術  Chainlink 網路由三個主要的區塊鏈元素組成：
+Oracle 的選擇 – 信譽合約
+查找數據提供者 (oracles) 的用戶指定服務水平協議（Service Level Agreement，“SLA”）中的要求。 SLA參數包括所需數量的預言機，所需的聲譽 oracles，以及請求的數據類型。 信譽合約跟踪服務提供商績效指標。相關供應商指標包括：
+(1)分配的請求總數 (2)完成的總數請求 (3)接受請求的總數 (4)平均回應時間 (5)罰款總額
+數據報告
+一旦 SLA 確定，鏈下預言機執行並將數據傳回區塊鏈以供區塊鏈用戶使用。 Chainlink 由節點網路組成，並扮演著鏈下數據和以太坊區塊鏈之間橋樑的角色。
+結果聚合
+一旦預言機揭示了他們的結果，聚合合約分析結果並向信譽合約報告。評估數據交付結果的及時性和正確性。檢測不正確的結果對於每個人來說都是一個獨特的問題數據饋送。出於這個原因，每個購買者可以指定一個定制的合約以驗證數據。這些結果有助於提高信譽幫助未來用戶評估數據提供者的系統。
+ 藉由將去中心化的節點與負責聚合的中介層，Chainlink 不僅成功的將現實世界的資料帶入到區塊連上，更確保輸入的資料具有正確性。</description>
     </item>
     
     <item>
