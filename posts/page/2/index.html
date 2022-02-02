@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Search Results</title>
+    <title>Posts</title>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -20,16 +20,10 @@
 
 
 
-<meta property="og:title" content="Search Results" />
-<meta property="og:description" content="This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&ldquo;HTML&rdquo;, &ldquo;JSON&rdquo;] ```" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jamesliao714.github.io/search/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2010-06-08T08:06:25+06:00" />
-<meta property="article:modified_time" content="2010-06-08T08:06:25+06:00" />
+<meta property="og:title" content="Posts" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jamesliao714.github.io/posts/" />
 
 
 
@@ -250,29 +244,62 @@ if (!doNotTrack) {
 <section class="content-section" id="content-section">
   <div class="content container-fluid" id="content">
     <div class="container-fluid post-card-holder" id="post-card-holder">
-      <div id="search-results">
-
-        <script id="search-result-template" type="text/x-js-template">
+      
+      
+      
+        
           <div class="post-card">
-            <a href="${link}" class="post-card-link">
-              <div class="card" style="min-height: 352px;"><a href="${link}" class="post-card-link">
-                <div class="card-head">
-                  <img class="card-img-top" src="${hero}" alt="Card Heading Image">
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">${title}</h5>
-                  <p class="card-text post-summary">${summary}</p>
-                </div>
-                <div class="card-footer">
-                  <span class="float-left">${date}</span>
-                  <a href="${link}" class="float-right btn btn-outline-info btn-sm">Read</a>
-                </div>
-              </div>
-	          </a>
-          </div>
-        </script>
-
+  <a href="/tsmc_intern/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
       </div>
+      <div class="card-body">
+        <h5 class="card-title">TSMC 實習經驗</h5>
+        <p class="card-text post-summary">背景  去年暑假到台積電的製造技術研發部門實習，因為本身對產業發展、國際政治非常有興趣，感謝友人牽能與一些高層及蘋果研發展處的長官吃飯，整個實習過程可說是收穫滿滿，但是也體驗到了不少公司的問題。剛好前陣子從美國來台受訓的外籍工程師，在網路上抱怨了一連串台積電在文化制度、系統、員工福利等方面的問題。我將利用親身經驗切入這個新聞，來深入探討我在這兩個月遇到的問題，以及為什麼我覺得 omiverse 應用在智慧工廠，能有效的解決問題，讓台積電能跨越智慧工廠開發的瓶頸。由於我實習的單位是跨領單位，所以主要想討論以下三個問題：
+ 智慧工廠貧頸 外籍工程師抱怨台積電軟體老舊、學習系統爛 系統軟體開發過程資料收集難  智慧工廠瓶頸  人工智慧（AI）的定義非常廣，機器學習在業界的應用相當廣，尤其是業界工廠的部分。身爲世界百大公司的台積電當然也提早佈局，除了工廠內部的設備相當先進，像是大家最熟悉由 ASML 所研發的極紫外光微影設備 (EUV)，晶片生產、派工的部份也近乎全自動化，並有許多部門負責智慧製造的執行與研發，但我認為台積電距離「智慧」工廠我覺得還有很長一段路要走。
+近幾年美國政府大力投資台積電至美國設廠，此動作一方面表達其技術的肯定，卻也間接承認美方對台海局勢不樂觀，不放心把晶片放在台灣生產。台積電當然也心知肚明美方用意，所以張忠謀創辦人表示「營運必須根留台灣」。我認為這句話背後的意涵很明顯的就是台積電未來海外設廠將朝向全自動化的智慧工廠，關鍵的技術、參數將由台灣這邊遠端操控。
+智慧工廠，台積電無疑已經近乎達成了自動化、智慧製造的部分，但仍有很多考驗需要解決。舉例來說，台積電對客戶晶片的品質要求非常高，一片晶圓上億個電晶體只要其中一個壞掉整片就要整片報廢，所以還是需要經過專業工程師花費大量時間檢查及確認。這也說明機器學習尤其是 deep learning，就算有 95%、99% 的準確率還是不夠的，加上其分類的方法就像黑盒子一樣難以解讀，導致大公司常常寧可用 Rule-based 的老方法來輔助產線，也不敢貿然將 AI 引入取代工程師。這也是為什麼台積電擁有許多先進機台及自動化工廠，擴廠時仍要不停的招募設備新人。目前業界在智慧工廠研發的貧頸也大多是在於人的「經驗」，處理未知、思考能力和責任感是人類不可被機器取代的關鍵，若想要真正達成智慧工廠我們還需要「人」的行為參數，以及讓我們蒐集、模擬更複雜的資訊的平台，才能建造出一個有「腦」「眼」「手」讓 AI 跨出輔助的模型。
+外籍工程師抱怨  回到外籍工程師提出的疑慮，公司內部的軟體相當老舊且缺乏整合、美感，系統相容性是主要的考量。台積電並非軟體或新創公司，在沒有 100% 的保握下，公司不會放棄產能來更新軟體，避免未來發生不必要的麻煩。這也造成了所謂的老舊體系，許多麻煩任務、重疊的系統安排讓整體效率相當不順暢。員工的訓練上，內部號稱最強的 E-learning 系統其實相當過時，其對於員工的訓練相當有限，尤其是在疫情爆發後，軟體、研發單位的工廠 (fab) 內部的訓練參觀都被取消或推延，導致開發者與產線工程師之間產生隔閡，導致開發過程相當沒效率，雙方配合的態度都不太積極。我認為未來將進入與病毒共存的時代，員工訓練的線上資源會越來越重要，保護公司技術財產之餘，也要提供員工更好的學習平台跟環境，才能符合台積鼓吹不斷學習的企業文化。
+資料搜集困難  再者，有鑒於大陸、競爭對手不斷地想竊取台積電技術的，公司的內外管控相當嚴格。這對於開發者尤其是軟體開發來說相當不友善。舉個例子來說，python 的套件需要手動安裝、使用 GPU 訓練或相關開發系統需要排隊使用。我在實習期間也相當困擾，整個開發流程相當不順暢，不像學校可以專注在研究上，而是要花很多時間去處理瑣碎的技術環境問題。我們常開玩笑說我們不是研發工程師，而是「套件」工程師。資料搜集也是一大難題，除了權限的層層關卡，各廠不同的系統和機台也導致資料取得的難度相當高，再加上機台蒐集到的數據常有嚴重的 data imbalance 的情況發生，許多研發的專案常常都無疾而終、胎死腹中。</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">September 9, 2021</span>
+        <a
+        href="/tsmc_intern/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+    </div>
+    <div class="paginator">
+      
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/posts/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
     </div>
   </div>
 </section>
@@ -433,9 +460,7 @@ if (!doNotTrack) {
 
     
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
-<script src="https://jamesliao714.github.io/js/search.js"></script>
+    <script src="/js/list.js"></script>
 
   </body>
 </html>
