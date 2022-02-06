@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Polkadot 介紹</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+
+
+<meta property="og:title" content="Polkadot 介紹" />
+<meta property="og:description" content="簡介  波卡是由多鏈共同運作組成的區塊鏈，其中包含了提名制的權益證明以及跨鏈運作協議。簡單來說波卡允許使用者在不同的區塊鏈中傳輸代幣或是資料，讓目前各個區塊鏈只能各自運作的狀況有了改變。其中特色還有除了公有鏈能互相傳輸外，波卡也能讓私有鏈和公有鏈互相協作。
+歷史  波卡鏈的創辦人是前以太坊的 CTO 及共同創辦人 Gavin Wood，他在 2016 年離開以太坊自己創立波卡，並在 2016 年 10 月推出了第一版的波卡白皮書，而波卡也在 2017 年 10 月參加當時火熱的 ICO，並募得超過 1.45 億美元這個金額是當時最成功的 ICO 項目，但波卡團隊可能也因為這個項目太有名遭到駭客盯上，高達 60% 的募款資金被駭客凍結無法動用，他們也承認因為這個狀況確實拖慢了波卡區塊鏈的開發進度。
+直到 2018 年他們推出了測試主網，並成功開發出許多重要功能，包括：Substrate、Web Assembly 智能合約等，2019-2020 開發都在穩步進行也在 2020/5 月正式推出波卡主網甫一推出就大獲市場支持，目前 DOT 代幣市值約 50 億美元在所有加密貨幣中為市值前 10 名的加密貨幣。
+區塊鏈特色及運行機制  波卡區塊鏈的最大特色是它是由主鏈(Relay Chain)和其他功能型的側鏈(Parachains, Bridges)組成，波卡也設計以下角色來確保區塊鏈的交易安全性和去中心化特質：驗證者(Validators)、提名者 (Nominators) 、收集者 (Collectors) 和漁夫(Fishermen)，只要透過質押 DOT 代幣到 Polkadot 的智能合約中就有機會可以成為上述角色確保波卡區塊鏈安全運行和獲得 DOT 獎勵。
+由於波卡區塊鏈是使用提名制權益證明(nominated-proof-of-stake – NPoS)
+假設有新交易需要被驗證並記錄在波卡區塊鏈上，波卡區塊鏈的運作機制如下：
+所有 DOT 代幣的持有人都可以當提名者提出一份他信任的驗證者名單，並抵押部分的 DOT 代幣，如果他提出的名單真的被選為驗證者並做出正確的紀錄，提名人就會收到一筆獎勵，所以如果你是提名人你只要提名有良好聲望和紀錄的驗證者你就有很大機率會獲得獎勵，等於所有人都被鼓勵去提名你信任的節點作為驗證者。驗證者同樣也需要抵押自己的 DOT 代幣才能進行驗證，如果表現不好系統會沒收他們質押的 DOT，驗證者會在 Parachains(側鏈)確認交易資訊，當所有交易資訊都正確後驗證者會把交易資訊打包到 Relay Chain(主鏈)上進行新的區塊出塊和將新區塊加到區塊鏈上。Bridges(側鏈)則是需要跨鏈交易時會經由 Bridges 作業再記錄到主鏈上。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jamesliao714.github.io/Polkadot/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-06T08:06:25+06:00" />
+<meta property="article:modified_time" content="2022-02-06T08:06:25+06:00" />
+
+
+
+    
+    
+<meta name="description" content="Polkadot 介紹" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+    
+        
+        
+          
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-122321624-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+        
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      James Blog</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/about/" title="About me">About me</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/MOT-proposal/" title="MOT overview">MOT overview</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/AICUP/" title="AI cup 得獎心得">AI cup 得獎心得</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/cpu/" title="處理器市場的看法">處理器市場的看法</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/tsmc_intern/" title="TSMC 實習經驗">TSMC 實習經驗</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/tsmc-strategy/" title="台積電海外設廠思維">台積電海外設廠思維</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/tsmc-3nm/" title="台積電三奈米挑戰">台積電三奈米挑戰</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/battlefield1/" title="全球戰場（ㄧ）">全球戰場（ㄧ）</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/battlefield2/" title="全球戰場（二）">全球戰場（二）</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/nft-meata/" title="元宇宙、NFT 市場看法">元宇宙、NFT 市場看法</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/solana/" title="Solana 介紹">Solana 介紹</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/chainlink/" title="Chainlink 介紹">Chainlink 介紹</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/Luna/" title="Luna 介紹">Luna 介紹</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/Polkadot/" title="Polkadot 介紹">Polkadot 介紹</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/USsemiconductor/" title="美國半導體供應鏈檢討報告">美國半導體供應鏈檢討報告</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://jamesliao714.github.io/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/James_huc9a317bbb7c0a6082890538ebe7af430_129353_120x120_fit_q75_box.jpg' alt="Author Image">
+          <h5 class="author-name">James Liao</h5>
+          <p>February 6, 2022</p>
+        </div>
+
+        <div class="title">
+          <h1>Polkadot 介紹</h1>
+        </div>
+        
+        <div class="post-content" id="post-content">
+          <h4 id="簡介">簡介</h4>
+<hr>
+<p>波卡是由多鏈共同運作組成的區塊鏈，其中包含了提名制的權益證明以及跨鏈運作協議。簡單來說波卡允許使用者在不同的區塊鏈中傳輸代幣或是資料，讓目前各個區塊鏈只能各自運作的狀況有了改變。其中特色還有除了公有鏈能互相傳輸外，波卡也能讓私有鏈和公有鏈互相協作。</p>
+<h4 id="歷史">歷史</h4>
+<hr>
+<p>波卡鏈的創辦人是前以太坊的 CTO 及共同創辦人 Gavin Wood，他在 2016 年離開以太坊自己創立波卡，並在 2016 年 10 月推出了第一版的波卡白皮書，而波卡也在 2017 年 10 月參加當時火熱的 ICO，並募得超過 1.45 億美元這個金額是當時最成功的 ICO 項目，但波卡團隊可能也因為這個項目太有名遭到駭客盯上，高達 60% 的募款資金被駭客凍結無法動用，他們也承認因為這個狀況確實拖慢了波卡區塊鏈的開發進度。</p>
+<p>直到 2018 年他們推出了測試主網，並成功開發出許多重要功能，包括：Substrate、Web Assembly 智能合約等，2019-2020 開發都在穩步進行也在 2020/5 月正式推出波卡主網甫一推出就大獲市場支持，目前 DOT 代幣市值約 50 億美元在所有加密貨幣中為市值前 10 名的加密貨幣。</p>
+<h4 id="區塊鏈特色及運行機制">區塊鏈特色及運行機制</h4>
+<hr>
+<p><img src="https://i.imgur.com/moQoCnX.jpg" alt="">
+波卡區塊鏈的最大特色是它是由主鏈(Relay Chain)和其他功能型的側鏈(Parachains, Bridges)組成，波卡也設計以下角色來確保區塊鏈的交易安全性和去中心化特質：驗證者(Validators)、提名者 (Nominators) 、收集者 (Collectors) 和漁夫(Fishermen)，只要透過質押 DOT 代幣到 Polkadot 的智能合約中就有機會可以成為上述角色確保波卡區塊鏈安全運行和獲得 DOT 獎勵。</p>
+<p>由於波卡區塊鏈是使用提名制權益證明(nominated-proof-of-stake – NPoS)</p>
+<p>假設有新交易需要被驗證並記錄在波卡區塊鏈上，波卡區塊鏈的運作機制如下：</p>
+<p>所有 DOT 代幣的持有人都可以當提名者提出一份他信任的驗證者名單，並抵押部分的 DOT 代幣，如果他提出的名單真的被選為驗證者並做出正確的紀錄，提名人就會收到一筆獎勵，所以如果你是提名人你只要提名有良好聲望和紀錄的驗證者你就有很大機率會獲得獎勵，等於所有人都被鼓勵去提名你信任的節點作為驗證者。驗證者同樣也需要抵押自己的 DOT 代幣才能進行驗證，如果表現不好系統會沒收他們質押的 DOT，驗證者會在 Parachains(側鏈)確認交易資訊，當所有交易資訊都正確後驗證者會把交易資訊打包到 Relay Chain(主鏈)上進行新的區塊出塊和將新區塊加到區塊鏈上。Bridges(側鏈)則是需要跨鏈交易時會經由 Bridges 作業再記錄到主鏈上。</p>
+<h4 id="polkadot-vs-以太坊ethereum">Polkadot vs 以太坊(Ethereum)</h4>
+<hr>
+<p>Polkadot 與目前正剛開始運行的以太坊 2.0 不可諱言的在目前的運行機制的設計和社群生態系上有相當多類似的點，例如波卡及以太坊都使用權益證明(Proof-of-stake)、以太坊的分片和波卡的 Parachains 都使用多鏈設計而非以太坊 1.0 的單鏈設計…等。目前波卡和以太坊在使用過程中有 4 個比較大的不同：</p>
+<p>交易手續費：以太坊 &gt; 波卡
+每秒交易量(tps)：以太坊 &lt; 波卡
+以太坊比較像是通用的區塊鏈而波卡可以因為不同應用設計不同區塊鏈
+以太坊可以很好的跟以太坊內其他的應用整合但無法跨鏈，波卡除了可以跟以太坊應用整合還可以跟其他例如比特幣、EOS 等區塊鏈整合應用</p>
+<h4 id="優缺點">優缺點</h4>
+<hr>
+<p><strong>優勢特點：</strong></p>
+<ul>
+<li>
+<p>創建了中心樞紐，給予不同特點的公鏈之間進行數據交互，給鏈上項目帶來極大的便利以及創新；同時提高了效率、節省大量的資源以及成本；</p>
+</li>
+<li>
+<p>提供貼近真實環境的方式讓項目進行提前測試，保證在網絡運行時的安全性給予新項目提前測試未知的風險。</p>
+</li>
+</ul>
+<p><strong>缺點：</strong></p>
+<ul>
+<li>
+<p>平行鏈插槽競拍需提供大量的DOT代幣作為質押，期間鎖倉時效較長，當價格暴跌時，就會產生一定的風險損失；</p>
+</li>
+<li>
+<p>Polkadot還需要完善各方面的技術以及生態存在的漏洞；</p>
+</li>
+<li>
+<p>引入作為 DeFi 基礎的穩定幣：穩定幣是決定 Polkadot 在內的所有公鏈生態成功的重要因素，無論是採用抵押方式生成穩定幣，還是跨鏈引入，都能讓 Polkadot在DeFi 市場上佔有一席之地。</p>
+<p>Polkadot自2015年上線，至今已有六年時間，比起其他公鏈如Solana，其生態發展未算迅猛，因近期平行鏈插槽拍賣再次引起關注。Polkadot整個生態的完善還需更多原生和跨鏈的項目加入，才能實現它“更高效更規模化無縫運行跨鏈項目”的美好願景。</p>
+</li>
+</ul>
+<h4 id="未來">未來</h4>
+<hr>
+<p>被稱為以太坊殺手的 Polkadot 無疑在技術上開創了一個全新的局面，唯獨推進速度不如預期，導致近期的社群聲量略減，不過在 Karura 表現不錯的情況下，或許隨著更多插槽拍賣的完成，polkadot 與 kusama 或許又會重新火熱起來。</p>
+<p>由目前整體網路的質押率高鐽63%可以得知，多半持有 Polkadot 的持幣人都是有在參與生態的，意味著在短期之內拋售代幣的可能性，比其他代幣來得低。</p>
+<p>在充滿競爭的跨鏈協議和難以擴展的區塊鏈世界中，Polkadot 提供了一個令人耳目一新的社群驅動框架，以構建一個更好、更分散的應用生態系，如文中所述，波卡想要做的不僅是一條公鏈，更是能夠使各個公鏈互相連結的跨鏈系統，也期待如果這樣子的技術順利擴展，或許將整體區塊鏈的應用規模再提升更多的層次。</p>
+
+        </div>
+
+        
+        <div class="row pl-3 pr-3">
+        
+        <div class="col-md-6 share-buttons">
+        
+          </div>
+
+        
+        
+          
+            
+          
+          <div class="col-md-6 btn-improve-page">
+             
+               <a href="https://JamesLiao714.github.io//edit/main/content/posts/polkadot.md" title="Improve this page" target="_blank" rel="noopener">
+            
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+        </div>
+
+
+
+      
+      <hr />
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+    
+  
+  
+
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/Luna/" title="Luna 介紹" class="btn btn-outline-info">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">Luna 介紹</div>
+      </a>
+    </div>
+  
+  
+      
+      
+        
+      
+      <div class="col-md-6 next-article">
+        <a href="/USsemiconductor/" title="美國半導體供應鏈檢討報告" class="btn btn-outline-info">
+          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+          <div class="next-prev-text">美國半導體供應鏈檢討報告</div>
+        </a>
+      </div>
+    
+</div>
+
+      <hr />
+
+      
+      
+        
+      
+      
+      
+
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#簡介">簡介</a></li>
+            <li><a href="#歷史">歷史</a></li>
+            <li><a href="#區塊鏈特色及運行機制">區塊鏈特色及運行機制</a></li>
+            <li><a href="#polkadot-vs-以太坊ethereum">Polkadot vs 以太坊(Ethereum)</a></li>
+            <li><a href="#優缺點">優缺點</a></li>
+            <li><a href="#未來">未來</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#about">About</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#experiences">Experiences &amp; Education</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#recent-posts">Recent Posts</a>
+                </li>
+              
+              
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:s9446760133@gmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>s9446760133@gmail.com</span>
+                </a></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2020 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>
