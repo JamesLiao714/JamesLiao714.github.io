@@ -13,6 +13,8 @@
   margin: 0;
   background-attachment: fixed;
   background-position: center;
+  transform: scale(1.1);
+  filter: blur(3px);
   background-size: cover;
 }
 
@@ -43,7 +45,7 @@
   margin-bottom: 10px;
 }
 
-.home .greeting, .home .greeting-subtitle {
+.home .greeting {
   color: #f9fafc;
 }
 

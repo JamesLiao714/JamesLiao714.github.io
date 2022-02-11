@@ -2,13 +2,27 @@
 <html>
   <head>
     <title>Multi object tracking overview</title>
-    <meta charset="UTF-8" />
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 
 <link rel="stylesheet" href="/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
 <link rel="stylesheet" href="/css/navigators/navbar.css"/>
 <link rel="stylesheet" href="/css/plyr.css"/>
 <link rel="stylesheet" href="/css/flag-icon.min.css"/>
@@ -18,19 +32,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
 
 
+<link rel="icon" type="image/png" href="/images/favicon_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_3.png" />
 
 
-<meta property="og:title" content="Multi object tracking overview" />
-<meta property="og:description" content="Literature Review  多目標跟蹤 (MOT) 主要任務是在給定視訊中同時對多個感興趣的目標進行定位，並且維持他們的標記 (ID)、記錄他們的軌跡。這些目標可以是路上的行人，路上的車輛，球場上的運動員，或者多組動物等等。而目前研究主要針對人類的原因有：
- 與生活中其他物體相比，行人是典型的非剛體目標，MOT的理想例子。 在實際應用中存在大量的含有行人的視訊，這意味著巨大的商機。 據資料統計，至少70% 的MOT研究都是針對行人的。 現存的 MOT 研究大致可分為兩類：Detection-Based Tracking (DBT) 和 Detection-Free Tracking (DFT)，如圖一所示：  處理模式則分為 Online 跟蹤與 Offline 跟蹤。Online用到的幀是直到當前幀的前面幀信息，Offline 則可以用到未來幀信息。雖然 online 能運用的資訊較少，但可以提供 real time 追蹤，所以實用性較佳。 目前常見 Track by detection 的計算流程為： (1) 給定影片資訊 (2) 執行檢測器取得目標的邊界框，例如Faster rcnn、Yolo等 (3) 提取每個檢測到的物體的不同個特徵，通常是視覺和運動特徵 (4) 計算前後兩幀目標屬於同一個目標的相似度 (5) 關聯算法根據相似度為每個對象分配ID，例如匈牙利算法。 其中，Track by detection 表現影響最大的部分在於檢測，檢測結果的好壞對於最後指標的影響是最大的，舉例你設計出更好的關聯算法可能只提升了 0.1 點，但別人換了更好的檢測器可能就能漲好幾個點。所以前學術界 MOT 的研究重點逐漸從相似度計算加入更好的檢測器來精進 (Refine) 結果。用好的檢測器拉高結果的 Upper bound，再用好的關聯計算更有效地達到檢測的 Upper bound。近年也有越來越多的研究著重於同時 detect 與 track 的設計，例如 Transformer 的應用。 評估 MOT 效能最主要的評價指標就是MOTA，這個指標綜合了三點因素：FP、FN、IDsw。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jamesliao714.github.io/MOT-proposal/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-12-21T08:06:25+06:00" />
-<meta property="article:modified_time" content="2021-12-21T08:06:25+06:00" />
+<link rel="stylesheet" href="/css/style.css"/>
 
-
-
-    
     
 <meta name="description" content="Multi object tracking overview" />
 <link
@@ -40,15 +46,10 @@
 <link rel="stylesheet" href="/css/layouts/single.css"/>
 <link rel="stylesheet" href="/css/navigators/sidebar.css">
 
-<link rel="stylesheet" href="/css/style.css"/>
-
-
 
     
     
-        
-        
-          
+      
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -60,11 +61,18 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-        
     
   </head>
 
   <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+
+    
+    
+      
+<div id="themeInitialization" style="display: none;"
+    default-theme=" dark "></div>
+    
+
     <div class="container-fluid bg-dimmed wrapper">
       
       
@@ -80,6 +88,15 @@ if (!doNotTrack) {
 
 
 
+  
+
+
+
+
+
+  
+
+
 
 <nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
   <div class="container">
@@ -87,7 +104,7 @@ if (!doNotTrack) {
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="/">
-      James Blog</a>
+      <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_3.png" alt="Logo">James Blog</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -99,8 +116,8 @@ if (!doNotTrack) {
     </div>
   </div>
   
-  
-  
+  <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  <img src="/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
 </nav>
 
 
@@ -286,7 +303,7 @@ if (!doNotTrack) {
       
       <div class="page-content">
         <div class="author-profile ml-auto align-self-lg-center">
-          <img class="rounded-circle" src='/images/author/James_huc9a317bbb7c0a6082890538ebe7af430_129353_120x120_fit_q75_box.jpg' alt="Author Image">
+          <img class="rounded-circle" src='/images/author/James.jpg' alt="Author Image">
           <h5 class="author-name">James Liao</h5>
           <p>December 21, 2021</p>
         </div>
@@ -294,7 +311,7 @@ if (!doNotTrack) {
         <div class="title">
           <h1>Multi object tracking overview</h1>
         </div>
-        
+
         <div class="post-content" id="post-content">
           <h2 id="literature-review">Literature Review</h2>
 <hr>
@@ -360,130 +377,110 @@ if (!doNotTrack) {
         </div>
 
         
-        <div class="row pl-3 pr-3">
         
-        <div class="col-md-6 share-buttons">
-        
-          </div>
-
-        
-        
-          
-            
-          
-          <div class="col-md-6 btn-improve-page">
-             
-               <a href="https://JamesLiao714.github.io//edit/main/content/posts/MOT.md" title="Improve this page" target="_blank" rel="noopener">
-            
+          <div class="btn-improve-page">
+              <a href="https://JamesLiao714.github.io//edit//content/posts/MOT.md" title="Improve this page" target="_blank" rel="noopener">
                 <i class="fas fa-code-branch"></i>
                 Improve this page
               </a>
           </div>
         
-        </div>
 
-
-
-      
+        
       <hr />
-        
-
-
-
-
-
+        <div class="row next-prev-navigator">
 
 
   
 
-
-
-
+  
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
     
-    
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-
-<div class="row next-prev-navigator">
-  
-    <div class="col-md-6 previous-article">
-      <a href="/about/" title="個人簡歷" class="btn btn-outline-info">
-        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
-        <div class="next-prev-text">個人簡歷</div>
-      </a>
-    </div>
-  
-  
       
-      
-        
-      
-      <div class="col-md-6 next-article">
-        <a href="/AICUP/" title="AI cup 得獎心得" class="btn btn-outline-info">
-          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
-          <div class="next-prev-text">AI cup 得獎心得</div>
+      <div class="col-md-6 previous-article">
+        <a href="/tsmc-strategy/" title="台積電海外設廠思維" class="btn btn-outline-info">
+          <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+          <div class="next-prev-text">台積電海外設廠思維</div>
         </a>
       </div>
+      
     
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/about/" title="個人簡歷" class="btn btn-outline-info">
+            <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+            <div class="next-prev-text">個人簡歷</div>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 </div>
 
       <hr />
-
       
       
-        
-      
-      
-      
-
       </div>
     </div>
   </div>
@@ -585,7 +582,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#about">About</a>
+                  <a class="smooth-scroll" href="/#about">About</a>
                 </li>
               
               
@@ -594,7 +591,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#experiences">Experiences &amp; Education</a>
+                  <a class="smooth-scroll" href="/#experiences">Experiences &amp; Education</a>
                 </li>
               
               
@@ -603,7 +600,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#recent-posts">Recent Posts</a>
+                  <a class="smooth-scroll" href="/#recent-posts">Recent Posts</a>
                 </li>
               
               
@@ -616,11 +613,7 @@ if (!doNotTrack) {
           <h5>Contact me:</h5>
           <ul>
             
-              
-                <li><a href=mailto:s9446760133@gmail.com target="_blank" rel="noopener">
-                  <span><i class="fas fa-envelope"></i></span> <span>s9446760133@gmail.com</span>
-                </a></li>
-              
+            <li><span>Email: </span> <span>s9446760133@gmail.com</span></li>
             
           </ul>
         </div>
@@ -663,6 +656,9 @@ if (!doNotTrack) {
 <script type="text/javascript" src="/js/navbar.js"></script>
 <script type="text/javascript" src="/js/plyr.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/darkreader@4.9.34/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode.js"></script>
 
 
     

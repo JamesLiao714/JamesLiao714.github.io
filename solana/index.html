@@ -2,13 +2,27 @@
 <html>
   <head>
     <title>Solana 介紹</title>
-    <meta charset="UTF-8" />
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 
 <link rel="stylesheet" href="/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
 <link rel="stylesheet" href="/css/navigators/navbar.css"/>
 <link rel="stylesheet" href="/css/plyr.css"/>
 <link rel="stylesheet" href="/css/flag-icon.min.css"/>
@@ -18,28 +32,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
 
 
+<link rel="icon" type="image/png" href="/images/favicon_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_3.png" />
 
 
-<meta property="og:title" content="Solana 介紹" />
-<meta property="og:description" content="簡介  「安全性、去中心化、效率」被稱為區塊鏈不可能的三角。也就是說最多只能滿足 2 個條件，如果安全性高、去中心化程度高，效率就會低（以太坊）；如果安全又有效率，那去中心化程度可能就不足（BSC 幣安智能鏈）。
-Solana 能以橫空出世的姿態崛起，很重要的原因是因為他在每秒可以處理的交易量、平均交易手續費、交易延遲時間都打趴了如以太坊、幣安智能鏈等智能合約區塊鏈，在驗者者數量上也有顧及到去中心化程度。
-Solana 是由 Anatoly Yakovenko 創立，他在 2017 年提出 Solana 的白皮書，2018 年與他在高通的前同事完成測試網的開發工作，2019 年開始陸續創投機構獲得數千萬到數億美元的投資。
-為什麼 Solana 可以這麼厲害呢？可以獲得投資機構親睞，原生代幣 $SOL 的價格也真的大幅飆漲？
-代理權益證明機制 PoS  Solana 是一個採取代理權益證明 PoS 共識機制的區塊鏈網路。也就是說 Solana 並非透過礦工的算力競賽來驗證交易，而是根據質押的代幣數量來選出驗證者，因為每一個持幣人（Stakeholder）都可以投票選出委託人，也就是代理節點，由得票最多的那些節點去負責生成區塊。這種民主機制，讓持有虛擬貨幣數量較小的使用者，也可以參與投票。
-Pos 這種共識機制，可以乘載更多交易數量，讓速度變快，就是因為 Pos 可以讓選出來的少數節點達成共識就好，不過也因為只依賴特定的那些節點，讓 PoS 的去中心化程度比較低。
-歷史證明機制 Proof of History  在歷史證明機制出現之前，區塊鏈上要完整紀錄交易的話，是由一個節點將交易資訊打包成區塊，再分發給其他的節點，等到所有的節點都接受且更新區塊鏈，交易才算是完成。雖然安全性高但速度慢，因此容易有交易「塞車」的狀況發生。
-然而，另一個讓 Solana 可以在交易處理速度上大勝其他區塊鏈的，是他的「歷史證明 Proof of History」共識機制。
-什麼是歷史證明（Proof-of-History，PoH）？也就是透過創建歷史記錄，證明交易在一個特定時間發生。先記錄了交易發生的順序，再由各個節點來更新與同步狀態。
-以餐廳來比喻的話，歷史證明機制就像發放號碼牌，先記錄了客人先來後到的順序，就不會需要一大群人在門口大排長龍。當然這個發放號碼牌證明順序的方法，涉及了很多加密的技術，有興趣可以參考延伸閱讀資料來多了解。
-新興 NFT 生態系  NFT 上架、交易最熱絡的區塊鏈依然是以太坊，但是 Solana 也在快速崛起。因為 Solana 交易速度快且 Gas Fee 低，所以越來越多的 NFT 選擇 Solana 來進行交易。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jamesliao714.github.io/solana/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-01-31T08:06:25+06:00" />
-<meta property="article:modified_time" content="2022-01-31T08:06:25+06:00" />
+<link rel="stylesheet" href="/css/style.css"/>
 
-
-
-    
     
 <meta name="description" content="Solana 介紹" />
 <link
@@ -49,15 +46,10 @@ Pos 這種共識機制，可以乘載更多交易數量，讓速度變快，就�
 <link rel="stylesheet" href="/css/layouts/single.css"/>
 <link rel="stylesheet" href="/css/navigators/sidebar.css">
 
-<link rel="stylesheet" href="/css/style.css"/>
-
-
 
     
     
-        
-        
-          
+      
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -69,11 +61,18 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-        
     
   </head>
 
   <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+
+    
+    
+      
+<div id="themeInitialization" style="display: none;"
+    default-theme=" dark "></div>
+    
+
     <div class="container-fluid bg-dimmed wrapper">
       
       
@@ -89,6 +88,15 @@ if (!doNotTrack) {
 
 
 
+  
+
+
+
+
+
+  
+
+
 
 <nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
   <div class="container">
@@ -96,7 +104,7 @@ if (!doNotTrack) {
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="/">
-      James Blog</a>
+      <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_3.png" alt="Logo">James Blog</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -108,8 +116,8 @@ if (!doNotTrack) {
     </div>
   </div>
   
-  
-  
+  <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  <img src="/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
 </nav>
 
 
@@ -295,7 +303,7 @@ if (!doNotTrack) {
       
       <div class="page-content">
         <div class="author-profile ml-auto align-self-lg-center">
-          <img class="rounded-circle" src='/images/author/James_huc9a317bbb7c0a6082890538ebe7af430_129353_120x120_fit_q75_box.jpg' alt="Author Image">
+          <img class="rounded-circle" src='/images/author/James.jpg' alt="Author Image">
           <h5 class="author-name">James Liao</h5>
           <p>January 31, 2022</p>
         </div>
@@ -303,7 +311,7 @@ if (!doNotTrack) {
         <div class="title">
           <h1>Solana 介紹</h1>
         </div>
-        
+
         <div class="post-content" id="post-content">
           <h4 id="簡介">簡介</h4>
 <hr>
@@ -342,130 +350,110 @@ if (!doNotTrack) {
         </div>
 
         
-        <div class="row pl-3 pr-3">
         
-        <div class="col-md-6 share-buttons">
-        
-          </div>
-
-        
-        
-          
-            
-          
-          <div class="col-md-6 btn-improve-page">
-             
-               <a href="https://JamesLiao714.github.io//edit/main/content/posts/sol.md" title="Improve this page" target="_blank" rel="noopener">
-            
+          <div class="btn-improve-page">
+              <a href="https://JamesLiao714.github.io//edit//content/posts/sol.md" title="Improve this page" target="_blank" rel="noopener">
                 <i class="fas fa-code-branch"></i>
                 Improve this page
               </a>
           </div>
         
-        </div>
 
-
-
-      
+        
       <hr />
-        
-
-
-
-
-
+        <div class="row next-prev-navigator">
 
 
   
 
-
-
-
-
-  
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
+  
+
+  
+
   
 
   
     
-    
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-
-<div class="row next-prev-navigator">
-  
-    <div class="col-md-6 previous-article">
-      <a href="/crypto/" title="加密貨幣好文分享" class="btn btn-outline-info">
-        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
-        <div class="next-prev-text">加密貨幣好文分享</div>
-      </a>
-    </div>
-  
-  
       
-      
-        
-      
-      <div class="col-md-6 next-article">
-        <a href="/chainlink/" title="Chainlink 介紹" class="btn btn-outline-info">
-          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
-          <div class="next-prev-text">Chainlink 介紹</div>
+      <div class="col-md-6 previous-article">
+        <a href="/Luna/" title="Luna 介紹" class="btn btn-outline-info">
+          <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+          <div class="next-prev-text">Luna 介紹</div>
         </a>
       </div>
+      
     
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/nft-meata/" title="元宇宙、NFT 市場看法" class="btn btn-outline-info">
+            <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+            <div class="next-prev-text">元宇宙、NFT 市場看法</div>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
 </div>
 
       <hr />
-
       
       
-        
-      
-      
-      
-
       </div>
     </div>
   </div>
@@ -577,7 +565,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#about">About</a>
+                  <a class="smooth-scroll" href="/#about">About</a>
                 </li>
               
               
@@ -586,7 +574,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#experiences">Experiences &amp; Education</a>
+                  <a class="smooth-scroll" href="/#experiences">Experiences &amp; Education</a>
                 </li>
               
               
@@ -595,7 +583,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#recent-posts">Recent Posts</a>
+                  <a class="smooth-scroll" href="/#recent-posts">Recent Posts</a>
                 </li>
               
               
@@ -608,11 +596,7 @@ if (!doNotTrack) {
           <h5>Contact me:</h5>
           <ul>
             
-              
-                <li><a href=mailto:s9446760133@gmail.com target="_blank" rel="noopener">
-                  <span><i class="fas fa-envelope"></i></span> <span>s9446760133@gmail.com</span>
-                </a></li>
-              
+            <li><span>Email: </span> <span>s9446760133@gmail.com</span></li>
             
           </ul>
         </div>
@@ -655,6 +639,9 @@ if (!doNotTrack) {
 <script type="text/javascript" src="/js/navbar.js"></script>
 <script type="text/javascript" src="/js/plyr.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/darkreader@4.9.34/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode.js"></script>
 
 
     

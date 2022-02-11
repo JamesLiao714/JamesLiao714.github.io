@@ -2,13 +2,27 @@
 <html>
   <head>
     <title>Search Results</title>
-    <meta charset="UTF-8" />
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 
 <link rel="stylesheet" href="/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
 <link rel="stylesheet" href="/css/navigators/navbar.css"/>
 <link rel="stylesheet" href="/css/plyr.css"/>
 <link rel="stylesheet" href="/css/flag-icon.min.css"/>
@@ -18,35 +32,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
 
 
+<link rel="icon" type="image/png" href="/images/favicon_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_3.png" />
 
 
-<meta property="og:title" content="Search Results" />
-<meta property="og:description" content="This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&ldquo;HTML&rdquo;, &ldquo;JSON&rdquo;] ```" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jamesliao714.github.io/search/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2010-06-08T08:06:25+06:00" />
-<meta property="article:modified_time" content="2010-06-08T08:06:25+06:00" />
+<link rel="stylesheet" href="/css/style.css"/>
 
-
-
-    
     
     <link rel="stylesheet" href="/css/layouts/list.css">
     <link rel="stylesheet" href="/css/navigators/sidebar.css">
-    
-    <link rel="stylesheet" href="/css/style.css"/>
-
 
 
     
     
-        
-        
-          
+      
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -58,11 +56,18 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-        
     
   </head>
 
   <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+
+    
+    
+      
+<div id="themeInitialization" style="display: none;"
+    default-theme=" dark "></div>
+    
+
     <div class="container-fluid bg-dimmed wrapper">
       
       
@@ -78,6 +83,15 @@ if (!doNotTrack) {
 
 
 
+  
+
+
+
+
+
+  
+
+
 
 <nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
   <div class="container">
@@ -85,7 +99,7 @@ if (!doNotTrack) {
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="/">
-      James Blog</a>
+      <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_3.png" alt="Logo">James Blog</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -97,8 +111,8 @@ if (!doNotTrack) {
     </div>
   </div>
   
-  
-  
+  <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  <img src="/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
 </nav>
 
 
@@ -378,7 +392,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#about">About</a>
+                  <a class="smooth-scroll" href="/#about">About</a>
                 </li>
               
               
@@ -387,7 +401,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#experiences">Experiences &amp; Education</a>
+                  <a class="smooth-scroll" href="/#experiences">Experiences &amp; Education</a>
                 </li>
               
               
@@ -396,7 +410,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#recent-posts">Recent Posts</a>
+                  <a class="smooth-scroll" href="/#recent-posts">Recent Posts</a>
                 </li>
               
               
@@ -409,11 +423,7 @@ if (!doNotTrack) {
           <h5>Contact me:</h5>
           <ul>
             
-              
-                <li><a href=mailto:s9446760133@gmail.com target="_blank" rel="noopener">
-                  <span><i class="fas fa-envelope"></i></span> <span>s9446760133@gmail.com</span>
-                </a></li>
-              
+            <li><span>Email: </span> <span>s9446760133@gmail.com</span></li>
             
           </ul>
         </div>
@@ -456,6 +466,9 @@ if (!doNotTrack) {
 <script type="text/javascript" src="/js/navbar.js"></script>
 <script type="text/javascript" src="/js/plyr.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/darkreader@4.9.34/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode.js"></script>
 
 
     

@@ -2,13 +2,27 @@
 <html>
   <head>
     <title>台積電三奈米挑戰</title>
-    <meta charset="UTF-8" />
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 
 <link rel="stylesheet" href="/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
 <link rel="stylesheet" href="/css/navigators/navbar.css"/>
 <link rel="stylesheet" href="/css/plyr.css"/>
 <link rel="stylesheet" href="/css/flag-icon.min.css"/>
@@ -18,21 +32,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
 
 
+<link rel="icon" type="image/png" href="/images/favicon_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_3.png" />
 
 
-<meta property="og:title" content="台積電三奈米挑戰" />
-<meta property="og:description" content="現況  目前台積電:
- 7 奈米晶片產能以於 2021 已經大幅量產、產量穩定，比起 2018 年的產能多了四倍，獲得 IEEE 企業創新獎。6 奈米（7奈米進化版）於 2021 年底也將佔 7 奈米的一半產能。 5 奈米晶片目前主要於台南十八廠（fab18）量產，主要應用於 5G、AI、HPC、網路裝置。產能的部分也預計在 2023 年達到 2020 年的四倍。 美國 Arizona Fab21 主要生產 5 奈米先進製程計劃於 2024 年開始量產。  台積電三奈米規劃  台積電表示目前 3 奈米製程一切按照計劃，預計於 2022 下半年量產，且在 2023 年會生產 N31 (三奈米加強版)，台積電總總裁魏哲家有信心 N31 將是當時世界最厲害的晶片。三星則放話要於 2022 上半年量產 3 奈米（GAA架構），彎道超車台積電。
-台積電三奈米產能評估  3 奈米工廠月晶圓產能粗估為 3000-5000 片，但有最新消息指出台積電 3 奈米製程超出預期，前期預估月產 1-3 萬片，未來能達到 5 萬到 6 萬片，2023 可以擴大到 10.5 萬片。
-根據台積電公開聲明，2022 年一季起開始調漲晶圓代工報價，最高階 7 奈米以下製程調漲 10%；16 奈米以上成熟製程將調漲 10-20% 避免囤貨。漲價後 5 奈米晶圓價格大概為 18686 美元左右，而新製程 3 奈米因為於發展前期，加上晶片短缺供不應求，預計價格為 3 萬美元上下。依照 2022 年月產能大約 5 萬片，每個月的 3 奈米晶圓收入估計 15 億美元，而 2023 則將成長為 30 億美元。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jamesliao714.github.io/tsmc-3nm/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-01-10T08:06:25+06:00" />
-<meta property="article:modified_time" content="2022-01-10T08:06:25+06:00" />
+<link rel="stylesheet" href="/css/style.css"/>
 
-
-
-    
     
 <meta name="description" content="台積電三奈米挑戰" />
 <link
@@ -42,15 +46,10 @@
 <link rel="stylesheet" href="/css/layouts/single.css"/>
 <link rel="stylesheet" href="/css/navigators/sidebar.css">
 
-<link rel="stylesheet" href="/css/style.css"/>
-
-
 
     
     
-        
-        
-          
+      
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -62,11 +61,18 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-        
     
   </head>
 
   <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+
+    
+    
+      
+<div id="themeInitialization" style="display: none;"
+    default-theme=" dark "></div>
+    
+
     <div class="container-fluid bg-dimmed wrapper">
       
       
@@ -82,6 +88,15 @@ if (!doNotTrack) {
 
 
 
+  
+
+
+
+
+
+  
+
+
 
 <nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
   <div class="container">
@@ -89,7 +104,7 @@ if (!doNotTrack) {
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="/">
-      James Blog</a>
+      <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_3.png" alt="Logo">James Blog</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -101,8 +116,8 @@ if (!doNotTrack) {
     </div>
   </div>
   
-  
-  
+  <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  <img src="/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
 </nav>
 
 
@@ -288,7 +303,7 @@ if (!doNotTrack) {
       
       <div class="page-content">
         <div class="author-profile ml-auto align-self-lg-center">
-          <img class="rounded-circle" src='/images/author/James_huc9a317bbb7c0a6082890538ebe7af430_129353_120x120_fit_q75_box.jpg' alt="Author Image">
+          <img class="rounded-circle" src='/images/author/James.jpg' alt="Author Image">
           <h5 class="author-name">James Liao</h5>
           <p>January 10, 2022</p>
         </div>
@@ -296,7 +311,7 @@ if (!doNotTrack) {
         <div class="title">
           <h1>台積電三奈米挑戰</h1>
         </div>
-        
+
         <div class="post-content" id="post-content">
           <h4 id="現況">現況</h4>
 <hr>
@@ -351,130 +366,110 @@ if (!doNotTrack) {
         </div>
 
         
-        <div class="row pl-3 pr-3">
         
-        <div class="col-md-6 share-buttons">
-        
-          </div>
-
-        
-        
-          
-            
-          
-          <div class="col-md-6 btn-improve-page">
-             
-               <a href="https://JamesLiao714.github.io//edit/main/content/posts/tsmc_3nm.md" title="Improve this page" target="_blank" rel="noopener">
-            
+          <div class="btn-improve-page">
+              <a href="https://JamesLiao714.github.io//edit//content/posts/tsmc_3nm.md" title="Improve this page" target="_blank" rel="noopener">
                 <i class="fas fa-code-branch"></i>
                 Improve this page
               </a>
           </div>
         
-        </div>
 
-
-
-      
+        
       <hr />
-        
-
-
-
-
-
+        <div class="row next-prev-navigator">
 
 
   
 
-
-
-
-
-  
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
     
-    
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-
-<div class="row next-prev-navigator">
-  
-    <div class="col-md-6 previous-article">
-      <a href="/tsmc-strategy/" title="台積電海外設廠思維" class="btn btn-outline-info">
-        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
-        <div class="next-prev-text">台積電海外設廠思維</div>
-      </a>
-    </div>
-  
-  
       
-      
-        
-      
-      <div class="col-md-6 next-article">
-        <a href="/battlefield1/" title="全球戰場個人淺見（一）" class="btn btn-outline-info">
-          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
-          <div class="next-prev-text">全球戰場個人淺見（一）</div>
+      <div class="col-md-6 previous-article">
+        <a href="/crypto/" title="加密貨幣好文分享" class="btn btn-outline-info">
+          <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+          <div class="next-prev-text">加密貨幣好文分享</div>
         </a>
       </div>
+      
     
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/AICUP/" title="AI cup 得獎心得" class="btn btn-outline-info">
+            <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+            <div class="next-prev-text">AI cup 得獎心得</div>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 </div>
 
       <hr />
-
       
       
-        
-      
-      
-      
-
       </div>
     </div>
   </div>
@@ -587,7 +582,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#about">About</a>
+                  <a class="smooth-scroll" href="/#about">About</a>
                 </li>
               
               
@@ -596,7 +591,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#experiences">Experiences &amp; Education</a>
+                  <a class="smooth-scroll" href="/#experiences">Experiences &amp; Education</a>
                 </li>
               
               
@@ -605,7 +600,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#recent-posts">Recent Posts</a>
+                  <a class="smooth-scroll" href="/#recent-posts">Recent Posts</a>
                 </li>
               
               
@@ -618,11 +613,7 @@ if (!doNotTrack) {
           <h5>Contact me:</h5>
           <ul>
             
-              
-                <li><a href=mailto:s9446760133@gmail.com target="_blank" rel="noopener">
-                  <span><i class="fas fa-envelope"></i></span> <span>s9446760133@gmail.com</span>
-                </a></li>
-              
+            <li><span>Email: </span> <span>s9446760133@gmail.com</span></li>
             
           </ul>
         </div>
@@ -665,6 +656,9 @@ if (!doNotTrack) {
 <script type="text/javascript" src="/js/navbar.js"></script>
 <script type="text/javascript" src="/js/plyr.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/darkreader@4.9.34/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode.js"></script>
 
 
     

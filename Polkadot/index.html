@@ -2,13 +2,27 @@
 <html>
   <head>
     <title>Polkadot 介紹</title>
-    <meta charset="UTF-8" />
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 
 <link rel="stylesheet" href="/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
 <link rel="stylesheet" href="/css/navigators/navbar.css"/>
 <link rel="stylesheet" href="/css/plyr.css"/>
 <link rel="stylesheet" href="/css/flag-icon.min.css"/>
@@ -18,24 +32,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
 
 
+<link rel="icon" type="image/png" href="/images/favicon_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_3.png" />
 
 
-<meta property="og:title" content="Polkadot 介紹" />
-<meta property="og:description" content="簡介  波卡是由多鏈共同運作組成的區塊鏈，其中包含了提名制的權益證明以及跨鏈運作協議。簡單來說波卡允許使用者在不同的區塊鏈中傳輸代幣或是資料，讓目前各個區塊鏈只能各自運作的狀況有了改變。其中特色還有除了公有鏈能互相傳輸外，波卡也能讓私有鏈和公有鏈互相協作。
-歷史  波卡鏈的創辦人是前以太坊的 CTO 及共同創辦人 Gavin Wood，他在 2016 年離開以太坊自己創立波卡，並在 2016 年 10 月推出了第一版的波卡白皮書，而波卡也在 2017 年 10 月參加當時火熱的 ICO，並募得超過 1.45 億美元這個金額是當時最成功的 ICO 項目，但波卡團隊可能也因為這個項目太有名遭到駭客盯上，高達 60% 的募款資金被駭客凍結無法動用，他們也承認因為這個狀況確實拖慢了波卡區塊鏈的開發進度。
-直到 2018 年他們推出了測試主網，並成功開發出許多重要功能，包括：Substrate、Web Assembly 智能合約等，2019-2020 開發都在穩步進行也在 2020/5 月正式推出波卡主網甫一推出就大獲市場支持，目前 DOT 代幣市值約 50 億美元在所有加密貨幣中為市值前 10 名的加密貨幣。
-區塊鏈特色及運行機制  波卡區塊鏈的最大特色是它是由主鏈(Relay Chain)和其他功能型的側鏈(Parachains, Bridges)組成，波卡也設計以下角色來確保區塊鏈的交易安全性和去中心化特質：驗證者(Validators)、提名者 (Nominators) 、收集者 (Collectors) 和漁夫(Fishermen)，只要透過質押 DOT 代幣到 Polkadot 的智能合約中就有機會可以成為上述角色確保波卡區塊鏈安全運行和獲得 DOT 獎勵。
-由於波卡區塊鏈是使用提名制權益證明(nominated-proof-of-stake – NPoS)
-假設有新交易需要被驗證並記錄在波卡區塊鏈上，波卡區塊鏈的運作機制如下：
-所有 DOT 代幣的持有人都可以當提名者提出一份他信任的驗證者名單，並抵押部分的 DOT 代幣，如果他提出的名單真的被選為驗證者並做出正確的紀錄，提名人就會收到一筆獎勵，所以如果你是提名人你只要提名有良好聲望和紀錄的驗證者你就有很大機率會獲得獎勵，等於所有人都被鼓勵去提名你信任的節點作為驗證者。驗證者同樣也需要抵押自己的 DOT 代幣才能進行驗證，如果表現不好系統會沒收他們質押的 DOT，驗證者會在 Parachains(側鏈)確認交易資訊，當所有交易資訊都正確後驗證者會把交易資訊打包到 Relay Chain(主鏈)上進行新的區塊出塊和將新區塊加到區塊鏈上。Bridges(側鏈)則是需要跨鏈交易時會經由 Bridges 作業再記錄到主鏈上。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jamesliao714.github.io/Polkadot/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-02-06T08:06:25+06:00" />
-<meta property="article:modified_time" content="2022-02-06T08:06:25+06:00" />
+<link rel="stylesheet" href="/css/style.css"/>
 
-
-
-    
     
 <meta name="description" content="Polkadot 介紹" />
 <link
@@ -45,15 +46,10 @@
 <link rel="stylesheet" href="/css/layouts/single.css"/>
 <link rel="stylesheet" href="/css/navigators/sidebar.css">
 
-<link rel="stylesheet" href="/css/style.css"/>
-
-
 
     
     
-        
-        
-          
+      
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -65,11 +61,18 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-        
     
   </head>
 
   <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+
+    
+    
+      
+<div id="themeInitialization" style="display: none;"
+    default-theme=" dark "></div>
+    
+
     <div class="container-fluid bg-dimmed wrapper">
       
       
@@ -85,6 +88,15 @@ if (!doNotTrack) {
 
 
 
+  
+
+
+
+
+
+  
+
+
 
 <nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
   <div class="container">
@@ -92,7 +104,7 @@ if (!doNotTrack) {
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="/">
-      James Blog</a>
+      <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_3.png" alt="Logo">James Blog</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -104,8 +116,8 @@ if (!doNotTrack) {
     </div>
   </div>
   
-  
-  
+  <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  <img src="/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
 </nav>
 
 
@@ -291,7 +303,7 @@ if (!doNotTrack) {
       
       <div class="page-content">
         <div class="author-profile ml-auto align-self-lg-center">
-          <img class="rounded-circle" src='/images/author/James_huc9a317bbb7c0a6082890538ebe7af430_129353_120x120_fit_q75_box.jpg' alt="Author Image">
+          <img class="rounded-circle" src='/images/author/James.jpg' alt="Author Image">
           <h5 class="author-name">James Liao</h5>
           <p>February 6, 2022</p>
         </div>
@@ -299,7 +311,7 @@ if (!doNotTrack) {
         <div class="title">
           <h1>Polkadot 介紹</h1>
         </div>
-        
+
         <div class="post-content" id="post-content">
           <h4 id="簡介">簡介</h4>
 <hr>
@@ -355,130 +367,110 @@ if (!doNotTrack) {
         </div>
 
         
-        <div class="row pl-3 pr-3">
         
-        <div class="col-md-6 share-buttons">
-        
-          </div>
-
-        
-        
-          
-            
-          
-          <div class="col-md-6 btn-improve-page">
-             
-               <a href="https://JamesLiao714.github.io//edit/main/content/posts/polkadot.md" title="Improve this page" target="_blank" rel="noopener">
-            
+          <div class="btn-improve-page">
+              <a href="https://JamesLiao714.github.io//edit//content/posts/polkadot.md" title="Improve this page" target="_blank" rel="noopener">
                 <i class="fas fa-code-branch"></i>
                 Improve this page
               </a>
           </div>
         
-        </div>
 
-
-
-      
+        
       <hr />
-        
-
-
-
-
-
+        <div class="row next-prev-navigator">
 
 
   
 
-
-
-
-
-  
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
     
-    
-  
-  
-
-  
-  
-
-
-<div class="row next-prev-navigator">
-  
-    <div class="col-md-6 previous-article">
-      <a href="/Luna/" title="Luna 介紹" class="btn btn-outline-info">
-        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
-        <div class="next-prev-text">Luna 介紹</div>
-      </a>
-    </div>
-  
-  
       
-      
-        
-      
-      <div class="col-md-6 next-article">
-        <a href="/USsemiconductor/" title="美國半導體供應鏈檢討報告" class="btn btn-outline-info">
-          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
-          <div class="next-prev-text">美國半導體供應鏈檢討報告</div>
+      <div class="col-md-6 previous-article">
+        <a href="/search/" title="অনুসন্ধানের ফলাফল" class="btn btn-outline-info">
+          <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+          <div class="next-prev-text">অনুসন্ধানের ফলাফল</div>
         </a>
       </div>
+      
     
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/battlefield2/" title="全球戰場個人淺見（二）" class="btn btn-outline-info">
+            <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+            <div class="next-prev-text">全球戰場個人淺見（二）</div>
+          </a>
+        </div>
+      
+    
+  
+
 </div>
 
       <hr />
-
       
       
-        
-      
-      
-      
-
       </div>
     </div>
   </div>
@@ -590,7 +582,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#about">About</a>
+                  <a class="smooth-scroll" href="/#about">About</a>
                 </li>
               
               
@@ -599,7 +591,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#experiences">Experiences &amp; Education</a>
+                  <a class="smooth-scroll" href="/#experiences">Experiences &amp; Education</a>
                 </li>
               
               
@@ -608,7 +600,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#recent-posts">Recent Posts</a>
+                  <a class="smooth-scroll" href="/#recent-posts">Recent Posts</a>
                 </li>
               
               
@@ -621,11 +613,7 @@ if (!doNotTrack) {
           <h5>Contact me:</h5>
           <ul>
             
-              
-                <li><a href=mailto:s9446760133@gmail.com target="_blank" rel="noopener">
-                  <span><i class="fas fa-envelope"></i></span> <span>s9446760133@gmail.com</span>
-                </a></li>
-              
+            <li><span>Email: </span> <span>s9446760133@gmail.com</span></li>
             
           </ul>
         </div>
@@ -668,6 +656,9 @@ if (!doNotTrack) {
 <script type="text/javascript" src="/js/navbar.js"></script>
 <script type="text/javascript" src="/js/plyr.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/darkreader@4.9.34/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode.js"></script>
 
 
     

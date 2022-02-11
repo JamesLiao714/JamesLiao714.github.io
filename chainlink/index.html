@@ -2,13 +2,27 @@
 <html>
   <head>
     <title>Chainlink 介紹</title>
-    <meta charset="UTF-8" />
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 
 <link rel="stylesheet" href="/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
 <link rel="stylesheet" href="/css/navigators/navbar.css"/>
 <link rel="stylesheet" href="/css/plyr.css"/>
 <link rel="stylesheet" href="/css/flag-icon.min.css"/>
@@ -18,36 +32,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
 
 
+<link rel="icon" type="image/png" href="/images/favicon_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_3.png" />
 
 
-<meta property="og:title" content="Chainlink 介紹" />
-<meta property="og:description" content="前言  由於區塊鏈不可竄改與永久保存的特性，許多產業開始藉此發展區塊鏈相關技術。然而，為了保持資訊安全性，基本上區塊鏈網路的建構是封閉的，無法接收區塊鏈以外的資訊。因此，在不同區塊鏈上運行的專案需要借助預言機服務的幫忙，來協助我們將資料輸入區塊鏈中。
-什麼是預言機？  預言機（Oracle）是一種第三方服務軟體，負責將現實世界的資料傳送到區塊鏈網路中。由於區塊鏈網路是一個封閉的系統，智能合約只能夠提取區塊鏈上的資料，無法獲得現實世界的資訊。因此，若是希望要讓智能合約成功的與人互動，就必須要透過預言機來將資料導入到區塊鏈中。 預言機可以透過 Web API 抓取現實世界的資料，例如：天氣、幣價、球賽結果等任何已經發生的事，並且在智能合約呼叫時根據需求將所需要的資料輸入區塊鏈網路中，提供智能合約做使用。相反的，如果少了預言機的存在，區塊鏈的應用將受到很大的限制。一旦無法取用現實世界的資料，智能合約將只能使用已經寫死在自己或是其他智能合約中的資料。這會嚴重的限制了區塊鏈的靈活性，也降低其便利性，使區塊鏈產業難以帶來落地應用。
-由此可知，預言機的存在對區塊鏈產來說至關重要。對於提倡去中心化的區塊鏈產業來說，一個中心化的預言機系統不僅會與區塊鏈的本質相違背，也會增加駭客攻擊導致輸入錯誤資料的風險。而這些擔憂，也帶來了 Chainlink 的問世。
-Chainlink 預言機運作模式  節點：能確焦資料來源的可信度
-為了避免單一數據來源被駭客攻擊，Chainlink 與區塊鏈類似，使用許多節點來獲取現實世界的資訊。
-當智能合約發送資料要求給節點時，每個節點各自透過 Web API 抓取資料，並回傳給智能合約。這樣的機制能夠確保資料來源的可信度，免除資料錯誤所帶來的危機，同時減少駭客入侵資料庫並竄改資料的風險。
-因此，節點就是鏈下數據的提供者。要成為節點必須質押一定數量的 LINK 代幣，正確提供資料的話則是能夠賺取 LINK 代幣。
-提供的資料錯誤時，Chainlink 的智能合約會將原本質押的 LINK 扣除作為懲罰。藉由這樣的獎懲機制來維持資料來源的穩定性與正確性。
-Chainlink 中介層：負責與其他智能合約互動
-除了在鏈下搜集資料的節點外，Chainlink 也有鏈上的智能合約，作為中介層。這個中介層會負責與其他智能合約互動，將需要的資料傳遞給節點，讓結點去搜尋。
-在節點搜尋完資料並回傳之後，中介層還有一個「聚合」的功能。由於是從許多節點搜集而來，來源有所不同的資料，所以會在這裡進行資料整理、比對。接著，智能合約會在這些資料中「取得共識」，去除掉離散值並且整理出相對正確的資料回傳給當初呼叫的智能合約。若是在經過多筆資料的比對之後，發現有錯誤資料，則會扣除該節點質押的 LINK 代幣作為懲罰。 LINK 的核心技術  Chainlink 網路由三個主要的區塊鏈元素組成：
-Oracle 的選擇 – 信譽合約
-查找數據提供者 (oracles) 的用戶指定服務水平協議（Service Level Agreement，“SLA”）中的要求。 SLA參數包括所需數量的預言機，所需的聲譽 oracles，以及請求的數據類型。 信譽合約跟踪服務提供商績效指標。相關供應商指標包括：
-(1)分配的請求總數 (2)完成的總數請求 (3)接受請求的總數 (4)平均回應時間 (5)罰款總額
-數據報告
-一旦 SLA 確定，鏈下預言機執行並將數據傳回區塊鏈以供區塊鏈用戶使用。 Chainlink 由節點網路組成，並扮演著鏈下數據和以太坊區塊鏈之間橋樑的角色。
-結果聚合
-一旦預言機揭示了他們的結果，聚合合約分析結果並向信譽合約報告。評估數據交付結果的及時性和正確性。檢測不正確的結果對於每個人來說都是一個獨特的問題數據饋送。出於這個原因，每個購買者可以指定一個定制的合約以驗證數據。這些結果有助於提高信譽幫助未來用戶評估數據提供者的系統。
- 藉由將去中心化的節點與負責聚合的中介層，Chainlink 不僅成功的將現實世界的資料帶入到區塊連上，更確保輸入的資料具有正確性。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jamesliao714.github.io/chainlink/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-02-01T08:06:25+06:00" />
-<meta property="article:modified_time" content="2022-02-01T08:06:25+06:00" />
+<link rel="stylesheet" href="/css/style.css"/>
 
-
-
-    
     
 <meta name="description" content="Chainlink 介紹" />
 <link
@@ -57,15 +46,10 @@ Oracle 的選擇 – 信譽合約
 <link rel="stylesheet" href="/css/layouts/single.css"/>
 <link rel="stylesheet" href="/css/navigators/sidebar.css">
 
-<link rel="stylesheet" href="/css/style.css"/>
-
-
 
     
     
-        
-        
-          
+      
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -77,11 +61,18 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-        
     
   </head>
 
   <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+
+    
+    
+      
+<div id="themeInitialization" style="display: none;"
+    default-theme=" dark "></div>
+    
+
     <div class="container-fluid bg-dimmed wrapper">
       
       
@@ -97,6 +88,15 @@ if (!doNotTrack) {
 
 
 
+  
+
+
+
+
+
+  
+
+
 
 <nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
   <div class="container">
@@ -104,7 +104,7 @@ if (!doNotTrack) {
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="/">
-      James Blog</a>
+      <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_3.png" alt="Logo">James Blog</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -116,8 +116,8 @@ if (!doNotTrack) {
     </div>
   </div>
   
-  
-  
+  <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  <img src="/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
 </nav>
 
 
@@ -303,7 +303,7 @@ if (!doNotTrack) {
       
       <div class="page-content">
         <div class="author-profile ml-auto align-self-lg-center">
-          <img class="rounded-circle" src='/images/author/James_huc9a317bbb7c0a6082890538ebe7af430_129353_120x120_fit_q75_box.jpg' alt="Author Image">
+          <img class="rounded-circle" src='/images/author/James.jpg' alt="Author Image">
           <h5 class="author-name">James Liao</h5>
           <p>February 1, 2022</p>
         </div>
@@ -311,7 +311,7 @@ if (!doNotTrack) {
         <div class="title">
           <h1>Chainlink 介紹</h1>
         </div>
-        
+
         <div class="post-content" id="post-content">
           <h4 id="前言">前言</h4>
 <hr>
@@ -373,130 +373,110 @@ if (!doNotTrack) {
         </div>
 
         
-        <div class="row pl-3 pr-3">
         
-        <div class="col-md-6 share-buttons">
-        
-          </div>
-
-        
-        
-          
-            
-          
-          <div class="col-md-6 btn-improve-page">
-             
-               <a href="https://JamesLiao714.github.io//edit/main/content/posts/link.md" title="Improve this page" target="_blank" rel="noopener">
-            
+          <div class="btn-improve-page">
+              <a href="https://JamesLiao714.github.io//edit//content/posts/link.md" title="Improve this page" target="_blank" rel="noopener">
                 <i class="fas fa-code-branch"></i>
                 Improve this page
               </a>
           </div>
         
-        </div>
 
-
-
-      
+        
       <hr />
-        
-
-
-
-
-
+        <div class="row next-prev-navigator">
 
 
   
 
-
-
-
-
-  
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
   
 
   
+
+  
+
   
 
   
     
-    
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-
-<div class="row next-prev-navigator">
-  
-    <div class="col-md-6 previous-article">
-      <a href="/solana/" title="Solana 介紹" class="btn btn-outline-info">
-        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
-        <div class="next-prev-text">Solana 介紹</div>
-      </a>
-    </div>
-  
-  
       
-      
-        
-      
-      <div class="col-md-6 next-article">
-        <a href="/Luna/" title="Luna 介紹" class="btn btn-outline-info">
-          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
-          <div class="next-prev-text">Luna 介紹</div>
+      <div class="col-md-6 previous-article">
+        <a href="/USsemiconductor/" title="美國半導體供應鏈檢討報告" class="btn btn-outline-info">
+          <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+          <div class="next-prev-text">美國半導體供應鏈檢討報告</div>
         </a>
       </div>
+      
     
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/Luna/" title="Luna 介紹" class="btn btn-outline-info">
+            <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+            <div class="next-prev-text">Luna 介紹</div>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
 </div>
 
       <hr />
-
       
       
-        
-      
-      
-      
-
       </div>
     </div>
   </div>
@@ -611,7 +591,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#about">About</a>
+                  <a class="smooth-scroll" href="/#about">About</a>
                 </li>
               
               
@@ -620,7 +600,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#experiences">Experiences &amp; Education</a>
+                  <a class="smooth-scroll" href="/#experiences">Experiences &amp; Education</a>
                 </li>
               
               
@@ -629,7 +609,7 @@ if (!doNotTrack) {
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://jamesliao714.github.io/#recent-posts">Recent Posts</a>
+                  <a class="smooth-scroll" href="/#recent-posts">Recent Posts</a>
                 </li>
               
               
@@ -642,11 +622,7 @@ if (!doNotTrack) {
           <h5>Contact me:</h5>
           <ul>
             
-              
-                <li><a href=mailto:s9446760133@gmail.com target="_blank" rel="noopener">
-                  <span><i class="fas fa-envelope"></i></span> <span>s9446760133@gmail.com</span>
-                </a></li>
-              
+            <li><span>Email: </span> <span>s9446760133@gmail.com</span></li>
             
           </ul>
         </div>
@@ -689,6 +665,9 @@ if (!doNotTrack) {
 <script type="text/javascript" src="/js/navbar.js"></script>
 <script type="text/javascript" src="/js/plyr.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/darkreader@4.9.34/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode.js"></script>
 
 
     

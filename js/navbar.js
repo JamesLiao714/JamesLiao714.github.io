@@ -16,12 +16,8 @@
         $('#navbar-toggler').addClass('navbar-light');
 
         // get the main logo from hidden img tag
-        let mainLogo = document.getElementById("main-logo")
-        if (mainLogo !== null) {
-          let logoURL = mainLogo.getAttribute("src");
-          $('#logo').attr("src", logoURL);
-        }
-
+        let mainLogo = document.getElementById("main-logo").getAttribute("src");
+        $('#logo').attr("src", mainLogo);
       } else {
         $('#top-navbar').removeClass('final-navbar shadow');
         $('#top-navbar').addClass('initial-navbar');
@@ -30,11 +26,8 @@
         $('#navbar-toggler').addClass('navbar-dark');
 
         // get the inverted logo from hidden img tag
-        let invertedLogo = document.getElementById("inverted-logo")
-        if (invertedLogo !== null) {
-          let logoURL = invertedLogo.getAttribute("src");
-          $('#logo').attr("src", logoURL);
-        }
+        let invertedLogo = document.getElementById("inverted-logo").getAttribute("src");
+        $('#logo').attr("src", invertedLogo);
       }
     });
 
