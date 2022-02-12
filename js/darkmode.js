@@ -44,4 +44,5 @@ function initializeColorScheme() {
     enableLightTheme();
   }
 }
-initializeColorScheme()
+//initializeColorScheme()
+enableDarkTheme()
