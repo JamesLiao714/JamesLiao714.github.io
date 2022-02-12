@@ -42,6 +42,12 @@ a:hover {
   color: #207089;
 }
 
+
+q {
+  font-family: cursive;
+  color:#e5e9f2;
+}
+
 .nav-button {
   background-color: transparent;
   border: 1px solid transparent;
@@ -158,6 +164,7 @@ img.right {
   transition: all 0.3s ease-out;
   transform: scale(1.2);
 }
+
 
 .card-body {
   text-align: justify;
