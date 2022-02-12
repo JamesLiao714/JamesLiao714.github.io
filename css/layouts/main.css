@@ -48,6 +48,10 @@ q {
   color:#e5e9f2;
 }
 
+.cite{
+  font-family: Courier New;
+}
+
 .nav-button {
   background-color: transparent;
   border: 1px solid transparent;
