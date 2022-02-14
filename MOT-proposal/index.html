@@ -49,19 +49,6 @@
 
     
     
-      
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-122321624-2', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-    
   </head>
 
   <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
@@ -252,7 +239,7 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="" href="/chainlink/" title="Chainlink 介紹">Chainlink 介紹</a></li>
+    <li><a class="" href="/Luna/" title="Luna 介紹">Luna 介紹</a></li>
   
 
   
@@ -261,7 +248,7 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="" href="/Luna/" title="Luna 介紹">Luna 介紹</a></li>
+    <li><a class="" href="/chainlink/" title="Chainlink 介紹">Chainlink 介紹</a></li>
   
 
   
@@ -346,22 +333,22 @@ if (!doNotTrack) {
 <li>
 <p>Zhang, Y., Sun, P., Jiang, Y., Yu, D., Yuan, Z., Luo, P., &hellip; &amp; Wang, X. (2021). ByteTrack: Multi-Object Tracking by Associating Every Detection Box. arXiv preprint arXiv:2110.06864.</p>
 <p>這篇論文目前在 MOT17, MOT20 challenge 中排名第一。論文提到近年來，物件追蹤做的越來越好，在 MOT challenge 比較容易偵測出來的人已經被配對的很好，也就是 Detection score 較高的物體。目前想把準確度再提升，就要解決所謂的遮擋問題，有就是 Detection score 較低的物體往往會被當成背景被捨去掉。因此作者提出了 tracking BY associaTing Every detection box（BYTE）的方式，把低分數的人跟背景分辨出來，並且批配在一起，解決遮擋問題。我認為這樣的方法雖然簡單有效，但面對更複雜的資料集是否能維持高效高分的表現，值得深思。</p>
- <img src="https://i.imgur.com/uQmYnmc.png" width="500" title ="圖三、BYTE在表現上勝過業界常用SORT、DeepSORT" >
+<!-- raw HTML omitted -->
 </li>
 <li>
 <p>Wang, Q., Zheng, Y., Pan, P., &amp; Xu, Y. (2021). Multiple Object Tracking with Correlation Learning. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 3876-3886).</p>
 <p>此篇論文作者提出的模型 CorrTracker 能夠分析目標物件周圍場景與目標的相關性，讓 feature map 像是上圖 (b) 一樣，能夠輕鬆找出目標</p>
- <img src="https://i.imgur.com/yNWWtaM.jpg" width="500">
+<!-- raw HTML omitted -->
 <p>本篇論文的模型是以 FairMOT 來做更改，使用方法分成三的步驟，分別是一般的特徵抽取、從時空相關性中學習，並預測出檢測結果、執行數據關聯，並將檢測結果分配到最可能的路徑中。下圖證明使用兩幀當輸入且使用他們提出的板模可以達到最高準確度</p>
- <img src="https://i.imgur.com/2Se4bJi.png" width="500">
+<!-- raw HTML omitted -->
 <p>下面是 CorrTracker 跟其他現有模型的比較。可見 CorrTrack 在速度及準確率的 tradeoff 表現非常好。</p>
- <img src="https://i.imgur.com/Jypv1Ee.jpg" width="500">
+<!-- raw HTML omitted -->
 <p>我認為這篇論文覺沒有提出 correlation 詳細一點的實作內容，對於 Self-supervised Feature Learning 的解釋也有點含糊帶過，但不得不說，他實驗的準確度高得驚人，而且也入選 CVPR2021，所以他提出的理論是有道理的，如果能夠把目標附近的特徵也學進去，對目標追蹤來說會有很大的幫助。雖說 CorrTracker 的準確度很高，ID switch 也發生的很少，但速度還是有點偏慢，反觀 FairMOT 雖然精準度和其他都輸 CorrTracker 一點，可是速度卻可以是他的接近兩倍，這點值得我們深思。</p>
 </li>
 <li>
 <p>Chu, P., Wang, J., You, Q., Ling, H., &amp; Liu, Z. (2021). TransMOT: Spatial-Temporal Graph Transformer for Multiple Object Tracking. arXiv preprint arXiv:2104.00194.</p>
 <p>這篇論文目前在 MOT17, MOT20 challenge 中排名第二。作者提出了 Spatial-Temporal Graph Transformer（STGT）的解決方案，該方案利用功能強大的 Graph transformers 有效地對對象之間的時空交互進行建模。由於是 sparse，所以在訓練和推理時的計算十分高效。由於探索了目標間的結構信息，所以比一般的 Transformer 也更有效。但 Transformer 的缺點就是運算速度，能否實現 real time 依然是最大的考驗。</p>
-  <img src="https://i.imgur.com/bPNarKF.jpg" width="500">
+<!-- raw HTML omitted -->
 </li>
 </ol>
 <h2 id="reference">Reference</h2>
@@ -376,14 +363,6 @@ if (!doNotTrack) {
 
         </div>
 
-        
-        
-          <div class="btn-improve-page">
-              <a href="https://JamesLiao714.github.io//edit//content/posts/MOT.md" title="Improve this page" target="_blank" rel="noopener">
-                <i class="fas fa-code-branch"></i>
-                Improve this page
-              </a>
-          </div>
         
 
         
@@ -625,11 +604,15 @@ if (!doNotTrack) {
             <li><span>Email: </span> <span>s9446760133@gmail.com</span></li>
             
           </ul>
-            
-            <a href="https://www.hitwebcounter.com" target="_blank"> Visitor: &nbsp;
-            <img src="https://hitwebcounter.com/counter/counter.php?page=7943221&style=0006&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" /></a>
-            
+
        </div>
+       <div class="col-md-4 col-sm-12">
+          <h5>Website information</h5>
+          
+          <a href="https://www.hitwebcounter.com" target="_blank"> Visitors: &nbsp;
+          <img src="https://hitwebcounter.com/counter/counter.php?page=7943221&style=0006&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" /></a>
+          
+        </div>
         
         
         
