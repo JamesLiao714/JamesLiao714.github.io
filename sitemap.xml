@@ -3,10 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://jamesliao714.github.io/</loc>
-    <lastmod>2022-02-14T08:06:25+06:00</lastmod>
+    <lastmod>2022-02-22T08:06:25+06:00</lastmod>
   </url><url>
     <loc>https://jamesliao714.github.io/posts/</loc>
-    <lastmod>2022-02-14T08:06:25+06:00</lastmod>
+    <lastmod>2022-02-22T08:06:25+06:00</lastmod>
+  </url><url>
+    <loc>https://jamesliao714.github.io/memoir/</loc>
+    <lastmod>2022-02-22T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
   </url><url>
     <loc>https://jamesliao714.github.io/battlefield2/</loc>
     <lastmod>2022-02-14T08:06:25+06:00</lastmod>
