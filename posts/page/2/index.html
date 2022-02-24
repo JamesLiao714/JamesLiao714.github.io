@@ -273,6 +273,15 @@
     <li><a class="" href="/memoir/" title="大學回憶錄（一）">大學回憶錄（一）</a></li>
   
 
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/RussiaUkraine/" title="普丁開戰烏克蘭">普丁開戰烏克蘭</a></li>
+  
+
 
             </div>
           </ul>
@@ -289,6 +298,31 @@
     <div class="container-fluid post-card-holder" id="post-card-holder">
       
       
+      
+        
+          <div class="post-card">
+  <a href="/AICUP/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">AI cup 得獎心得</h5>
+        <p class="card-text post-summary">基本資訊   比賽名稱：AICUP 農業文章文字標註及辨識 Final Report 隊伍名稱：Rule-Based Method 隊員：姜宏昀 最終成績：創意獎（innovation award）、佳作（excellent award)  F1-score 0.8063660 precision : 0.82608 recall : 0.78756     Preprocessing   先針對主辦單位所提供的excel檔，創造出一個替換的dictionary  比如說 ，就把斜紋夜盜、黑蟲、行軍蟲&hellip;全部換成斜紋夜蛾，方面後續model使用   對每篇文章利用ckiptagger做斷詞  在斷詞的時候要使用 coerce_dictionary 這個參數，這個參數可以讓主辦單位提供的keywords，被強制斷出來，不然可能會發生 &ldquo;黑蟲&rdquo; 被斷成 [&ldquo;黑&rdquo; &ldquo;蟲&rdquo;]   把斷好詞的結果做keywords的替換  ex: 把所有 &ldquo;黑蟲&rdquo; 換成 &ldquo;斜紋夜盜&rdquo; 這樣 在這一步的時候要注意一些特別case，避免被重複替換到   針對每篇文章，取出該篇文章所有出現的keyword集合  比如說 1.txt這篇文章 keyword_set = [&ldquo;黑點病&rdquo;,&ldquo;降雨&rdquo;,&ldquo;文旦柚&rdquo;,&ldquo;鋅錳乃浦&rdquo;]    Method  在這邊我們一開始的思路有幾種</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">January 9, 2022</span>
+        <a
+        href="/AICUP/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
       
         
           <div class="post-card">
