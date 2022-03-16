@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>我的柔道生涯</title>
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/favicon_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_3.png" />
+
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+    
+<meta name="description" content="我的柔道生涯" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+
+    
+    
+      
+<div id="themeInitialization" style="display: none;"
+    default-theme=" dark "></div>
+    
+
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_3.png" alt="Logo">James Blog</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  <img src="/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/about/" title="個人簡歷">個人簡歷</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/MOT-proposal/" title="MOT overview">MOT overview</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/AICUP/" title="AI cup 得獎心得">AI cup 得獎心得</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/cpu/" title="處理器市場的看法">處理器市場的看法</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/tsmc_intern/" title="TSMC 實習經驗">TSMC 實習經驗</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/tsmc-strategy/" title="台積電海外設廠思維">台積電海外設廠思維</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/tsmc-3nm/" title="台積電三奈米挑戰">台積電三奈米挑戰</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/battlefield1/" title="全球戰場（ㄧ）">全球戰場（ㄧ）</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/battlefield2/" title="全球戰場（二）">全球戰場（二）</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/nft-meata/" title="元宇宙、NFT 市場看法">元宇宙、NFT 市場看法</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/crypto/" title="加密貨幣好文分享">加密貨幣好文分享</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/solana/" title="Solana 介紹">Solana 介紹</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/Luna/" title="Luna 介紹">Luna 介紹</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/chainlink/" title="Chainlink 介紹">Chainlink 介紹</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/Polkadot/" title="Polkadot 介紹">Polkadot 介紹</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/USsemiconductor/" title="美國半導體供應鏈檢討報告">美國半導體供應鏈檢討報告</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/memoir/" title="大學回憶錄（一）">大學回憶錄（一）</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/judo/" title="我的柔道生涯">我的柔道生涯</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/RussiaUkraine/" title="普丁開戰烏克蘭">普丁開戰烏克蘭</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://jamesliao714.github.io/images/judo.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/James.jpg' alt="Author Image">
+          <h5 class="author-name">James Liao</h5>
+          <p>March 15, 2022</p>
+        </div>
+
+        <div class="title">
+          <h1>我的柔道生涯</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h4 id="前言">前言</h4>
+<hr>
+<ul>
+<li>柔道黑帶，曾經放話要當柔道國手的我，是怎麼淪落到一個學電腦的碩士生呢？</li>
+<li>其實我很少講這段故事，因為這對我來說是一個失去夢想的故事&hellip;</li>
+<li>這篇我會為老廖的忠實紛絲來解密～</li>
+</ul>
+
+        </div>
+
+        
+
+        
+      <hr />
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+    
+  
+  
+
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/memoir/" title="大學回憶錄 - 改變我的一場選舉" class="btn btn-outline-info">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">大學回憶錄 - 改變我的一場選舉</div>
+      </a>
+    </div>
+  
+  
+      
+      
+        
+      
+      <div class="col-md-6 next-article">
+        <a href="/RussiaUkraine/" title="普丁開戰烏克蘭" class="btn btn-outline-info">
+          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+          <div class="next-prev-text">普丁開戰烏克蘭</div>
+        </a>
+      </div>
+    
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#前言">前言</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="/#about">About</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="/#experiences">Experiences &amp; Education</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="/#recent-posts">Recent Posts</a>
+                </li>
+              
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="/#accomplishments">Licenses &amp; Awards</a>
+                </li>
+              
+          </ul>
+          
+        </div>
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Website information</h5>
+         
+          
+          <span class="post-meta-item-icon">
+            <i class="fa fa-user"></i>
+          </span>
+          <a href="https://www.hitwebcounter.com" target="_blank"> Total viewers: &nbsp;
+          <img src="https://hitwebcounter.com/counter/counter.php?page=7943221&style=0006&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" /></a>
+          
+          <p> </p>
+          
+          <span class="post-meta-item-icon">
+            <i class="fa fa-user"></i>
+          </span>
+          <a href="https://www.hitwebcounter.com" target="_blank"> Total vistors: &nbsp;
+            <img src="https://hitwebcounter.com/counter/counter.php?page=7944784&style=0006&nbdigits=5&type=ip&initCount=0" title="Free Counter" Alt="web counter"   border="0" /></a>                                    
+          </div>
+          <p> </p>
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+            <li><span>Email: </span> <span>s9446760133@gmail.com</span></li>
+            
+          </ul>
+
+       </div>
+      
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+         
+        </div>
+        <div class="col-md-4 text-center">© 2021 James Liao. All rights reserved.</div>
+        <div class="col-md-4 text-right">
+        
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/darkreader@4.9.34/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>
