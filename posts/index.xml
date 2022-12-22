@@ -43,14 +43,5 @@ SIA於2021年4月發表之研究報告指出位於東亞的臺灣（20%）、中
       <description>基本資訊   比賽名稱：AICUP 農業文章文字標註及辨識 Final Report 隊伍名稱：Rule-Based Method 隊員：姜宏昀 最終成績：創意獎（innovation award）、佳作（excellent award)  F1-score 0.8063660 precision : 0.82608 recall : 0.78756     Preprocessing   先針對主辦單位所提供的excel檔，創造出一個替換的dictionary  比如說 ，就把斜紋夜盜、黑蟲、行軍蟲&amp;hellip;全部換成斜紋夜蛾，方面後續model使用   對每篇文章利用ckiptagger做斷詞  在斷詞的時候要使用 coerce_dictionary 這個參數，這個參數可以讓主辦單位提供的keywords，被強制斷出來，不然可能會發生 &amp;ldquo;黑蟲&amp;rdquo; 被斷成 [&amp;ldquo;黑&amp;rdquo; &amp;ldquo;蟲&amp;rdquo;]   把斷好詞的結果做keywords的替換  ex: 把所有 &amp;ldquo;黑蟲&amp;rdquo; 換成 &amp;ldquo;斜紋夜盜&amp;rdquo; 這樣 在這一步的時候要注意一些特別case，避免被重複替換到   針對每篇文章，取出該篇文章所有出現的keyword集合  比如說 1.txt這篇文章 keyword_set = [&amp;ldquo;黑點病&amp;rdquo;,&amp;ldquo;降雨&amp;rdquo;,&amp;ldquo;文旦柚&amp;rdquo;,&amp;ldquo;鋅錳乃浦&amp;rdquo;]    Method  在這邊我們一開始的思路有幾種</description>
     </item>
     
-    <item>
-      <title>個人簡歷</title>
-      <link>https://jamesliao714.github.io/about/</link>
-      <pubDate>Mon, 05 Jul 2021 08:06:25 +0600</pubDate>
-      
-      <guid>https://jamesliao714.github.io/about/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
